@@ -19,4 +19,6 @@ This full-stack app is meant to facilitate the exit ticket process at GA. This s
 
 ## ERD
 
+[ERD](/Exit_Ticket_App/app/assets/images/Project3_ERD.png)
+
 
