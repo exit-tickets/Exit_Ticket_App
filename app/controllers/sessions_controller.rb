@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 	def create
 		instructor = Instructor.find_by({email: params[:email]})
 		if instructor && instructor.authenticate(params[:password])
-			session[:instructor_id] = instructor.instructor_id
+			session[:instructor_id] = instructor.id
 			redirect_to instructors_path
 		else 
 			render :new
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
 		student = Student.find_by({email: params[:email]})
 		if student && student.authenticate(params[:password])
-			session[:student_id] = student.student_id
+			session[:student_id] = student.id
 			redirect_to students_path
 		else 
 			render :new
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
 
 		producer = Producer.find_by({email: params[:email]})
 		if producer && producer.authenticate(params[:password])
-			session[:producer_id] = producer.producer_id
+			session[:producer_id] = producer.id
 			redirect_to producers_path
 		else 
 			render :new
