@@ -1,0 +1,30 @@
+<div class="cohort-show-page">
+  <a href="/">Home</a>
+  <a href="/cohorts">Back to All Cohorts</a>
+  <a href="/exittickets">Exit Tickets</a>
+  <h1>Cohort: <%= cohort.name %></h1>
+  <div class="cohort-instructors">
+    <h2>Instructors:</h2>
+      <ul>
+        <% @instructors.each do |instructor| %>
+        <li> <%= instructor.first_name %> <%= instructor.last_name %></li>
+        <% end %>
+      </ul>
+  </div>
+  <div class="cohort-producers">
+    <h2>Producers:</h2>
+      <ul>
+        <% @producers.each do |producer| %>
+        <li> <%= producer.first_name %> <%= producer.last_name %></li>
+        <% end %>
+      </ul>
+  </div>
+  <div class="cohort-students">
+    <h2>Students:</h2>
+      <ul>
+        <% @students.each do |student| %>
+        <li> <%= student.first_name %> <%= student.last_name %></li>
+        <% end %>
+    </ul>
+  </div>
+</div>
