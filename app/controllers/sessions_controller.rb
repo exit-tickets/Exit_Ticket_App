@@ -3,40 +3,39 @@ class SessionsController < ApplicationController
 	def new 
 	end
 
-	def create
+	def create_instructor
 		instructor = Instructor.find_by({email: params[:email]})
 		if instructor && instructor.authenticate(params[:password])
-			session[:instructor_id] = instructor.instructor_id
-			redirect_to instructors_path
+			session[:user_id] = instructor.id
+			redirect_to "/"
 		else 
 			render :new
 		end
+	end
 
+	def create_student
 		student = Student.find_by({email: params[:email]})
 		if student && student.authenticate(params[:password])
-			session[:student_id] = student.student_id
-			redirect_to students_path
+			session[:user_id] = student.id
+			redirect_to "/"
 		else 
 			render :new
 		end
+	end
 
+
+	def create_producer
 		producer = Producer.find_by({email: params[:email]})
 		if producer && producer.authenticate(params[:password])
-			session[:producer_id] = producer.producer_id
-			redirect_to producers_path
+			session[:user_id] = producer.id
+			redirect_to "/"
 		else 
 			render :new
 		end
 	end
 
 	def destroy
-		if session[:instructor_id]
-			session[:instructor_id] = nil
-		elsif session[:student_id]
-			session[:student_id] = nil
-		else
-			session[:producer_id] = nil
-		end
+		session[:user_id] = nil
 		redirect_to '/login'
 	end
 end

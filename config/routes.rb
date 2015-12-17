@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  
+  # root 'welcome#index'
+  root 'sessions#new'
+  get '/login' => 'sessions#new'
+  post '/login_producer' => 'sessions#create_producer'
+  post '/login_instructor' => 'sessions#create_instructor'
+  post '/login_student' => 'sessions#create_student'
+  delete '/logout' => 'sessions#destroy'
+  get '/register_student' => 'students#new'
+  get '/register_producer' => 'producers#new'
 
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
-
-  # resources :instructors
-  # resources :students
-  # resources :cohorts
-  # resources :exit_tickets
-  # resources :producers
-  # resources :questions
-  # resources :responses
   shallow do 
     resources :instructors do
       resources :cohorts 
@@ -25,6 +23,8 @@ Rails.application.routes.draw do
       resources :producers
     end
   end
+
+  resources :producers
 
   shallow do 
     resources :exit_tickets do

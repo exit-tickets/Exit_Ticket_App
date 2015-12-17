@@ -18,6 +18,10 @@ class CohortsController < ApplicationController
 
 	def show
 		@cohort = Cohort.find(params[:id])
+		@students = @cohort.students
+		@instructors = @cohort.instructors
+		@producers = @cohort.producers
+      erb :show_category
 	end
 
 	def destroy

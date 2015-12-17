@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151216194210) do
+=======
+ActiveRecord::Schema.define(version: 20151217152324) do
+>>>>>>> 67de83ca1afcc446b048e904e58a2f3264a64a87
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,8 +40,8 @@ ActiveRecord::Schema.define(version: 20151216194210) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "producers", force: :cascade do |t|
@@ -47,6 +51,7 @@ ActiveRecord::Schema.define(version: 20151216194210) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "cohort_id"
   end
 
   create_table "questions", force: :cascade do |t|

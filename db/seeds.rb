@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -91,3 +92,4 @@ students = Student.create([
   {first_name: "Man", last_name: "Man", email: "manman@email.com", password: "password123", cohort_id: Cohort.find_nth(14)},
   {first_name: "A.", last_name: "Nubis", email: "nubicat@email.com", password: "password123", cohort_id: Cohort.find_nth(14)},
   ])
+
