@@ -1,21 +1,17 @@
 <div class="cohort-show-page">
   <a href="/">Home</a>
   <a href="/cohorts">Back to All Cohorts</a>
-  <h1>Cohort: <%= cohort.name %></h1>
+  <h1>Cohort: <%= @cohort.name %></h1>
   <div class="cohort-instructors">
     <h2>Instructors:</h2>
       <ul>
-        <% @instructors.each do |instructor| %>
-        <li> <%= instructor.first_name %> <%= instructor.last_name %></li>
-        <% end %>
+        <li> <%= @instructor.first_name %> <%= @instructor.last_name %></li>
       </ul>
   </div>
   <div class="cohort-producers">
     <h2>Producers:</h2>
       <ul>
-        <% @producers.each do |producer| %>
-        <li> <%= producer.first_name %> <%= producer.last_name %></li>
-        <% end %>
+        <li></li>
       </ul>
   </div>
   <div class="cohort-students">
@@ -28,8 +24,8 @@
   </div>
   <div class="create-exit-ticket">
     <% if current_instructor %>
-     <%= form_tag(exit_ticket, method: 'post') do %>
-        <%= hidden_field_tag %>
+     <%= form_tag(exit_ticket_path, method: 'post') do %>
+        <%= hidden_field_tag 'new' %>
         <%= submit_tag('Create an Exit Ticket') %>
         <% end %>
     <% end %>
