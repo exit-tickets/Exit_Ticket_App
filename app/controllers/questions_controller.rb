@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
 			exit_ticket_id: params[:exit_ticket_id],
 			question: params[:question]
 			})
-		redirect_to questions_path
+		render :new
 	end
 
 	def show
