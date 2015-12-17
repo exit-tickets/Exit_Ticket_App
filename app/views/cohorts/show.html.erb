@@ -28,7 +28,10 @@
   </div>
   <div class="create-exit-ticket">
     <% if current_instructor %>
-    <a href="/cohorts/:cohort_id/exittickets/new">Create an Exit Ticket</a>
+     <%= form_tag(exit_ticket, method: 'post') do %>
+        <%= hidden_field_tag %>
+        <%= submit_tag('Create an Exit Ticket') %>
+        <% end %>
     <% end %>
   </div>
 </div>
