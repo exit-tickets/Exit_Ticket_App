@@ -12,7 +12,7 @@
     <% if session[:user_id] %>
       <%= button_to "Logout", '/logout', {method: 'delete'} %>
     <% else %>
-      <%= link_to '/login' %>
+      <%= link_to 'Login', '/login' %>
     <% end %>
 
   </header>
