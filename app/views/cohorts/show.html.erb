@@ -1,7 +1,6 @@
 <div class="cohort-show-page">
   <a href="/">Home</a>
   <a href="/cohorts">Back to All Cohorts</a>
-  <a href="/exittickets">Exit Tickets</a>
   <h1>Cohort: <%= cohort.name %></h1>
   <div class="cohort-instructors">
     <h2>Instructors:</h2>
@@ -26,5 +25,10 @@
         <li> <%= student.first_name %> <%= student.last_name %></li>
         <% end %>
     </ul>
+  </div>
+  <div class="create-exit-ticket">
+    <% if current_instructor %>
+    <a href="/cohorts/:cohort_id/exittickets/new">Create an Exit Ticket</a>
+    <% end %>
   </div>
 </div>
