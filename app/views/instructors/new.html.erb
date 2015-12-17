@@ -1,0 +1,19 @@
+<h1>Register as an Instructor</h1>
+<%= form_tag("/instructors", method: "post") do %>
+  <%= label_tag :first_name %>
+  <%= text_field_tag :first_name %>
+  <br>
+  <%= label_tag :last_name %>
+  <%= text_field_tag :last_name %>
+  <br>
+  <%= label_tag :email %>
+  <%= text_field_tag :email %>
+  <br>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <br>
+  <%= label_tag :password_confirmation %>
+  <%= password_field_tag :password_confirmation %>
+  <br>
+  <%= submit_tag "Register!" %>
+<% end %>
