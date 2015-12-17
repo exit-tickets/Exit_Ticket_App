@@ -1,0 +1,10 @@
+<div class="cohort-show-page">
+  <h1>Browse All Cohorts</h1>
+  <div class="list-cohorts">
+    <ul>
+      <% @cohorts.each do |cohort| %>
+      <li><a href="/cohorts/:id"><%= cohort.name %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
