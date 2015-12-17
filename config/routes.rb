@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   get '/register_student' => 'students#new'
   get '/register_producer' => 'producers#new'
+  get '/register_instructor' => 'instructors#new'
 
   shallow do 
     resources :instructors do
