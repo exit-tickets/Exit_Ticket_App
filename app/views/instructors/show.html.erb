@@ -1,0 +1,8 @@
+<h2> Welcome <%=@instructor.first_name %>! </h2>
+
+<% @instructor.cohorts.each do |cohort| %>
+
+  <p><a href="/cohorts/<%=cohort.id%>"> <%= cohort.name %> </a> </p>
+
+<% end %>
+
