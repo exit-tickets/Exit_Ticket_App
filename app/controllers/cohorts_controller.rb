@@ -19,9 +19,8 @@ class CohortsController < ApplicationController
 	def show
 		@cohort = Cohort.find(params[:id])
 		@students = @cohort.students
-		@instructors = @cohort.instructors
-		@producers = @cohort.producers
-      erb :show_category
+		@instructor = Instructor.find(params[:instructor_id])
+		# @producer = @cohort.producer if @cohort.producer
 	end
 
 	def destroy

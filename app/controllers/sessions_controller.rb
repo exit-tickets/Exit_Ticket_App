@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 		instructor = Instructor.find_by({email: params[:email]})
 		if instructor && instructor.authenticate(params[:password])
 			session[:user_id] = instructor.id
-			redirect_to instructors_path
+			redirect_to "/instructors/#{instructor.id}"
 		else 
 			render :new
 		end

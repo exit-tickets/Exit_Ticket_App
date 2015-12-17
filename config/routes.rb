@@ -11,39 +11,40 @@ Rails.application.routes.draw do
   get '/register_producer' => 'producers#new'
   get '/register_instructor' => 'instructors#new'
 
-  shallow do 
+  # shallow do 
     resources :instructors do
       resources :cohorts 
     end
-  end
+  # end
 
-  shallow do
+  # shallow do
     resources :cohorts do 
       resources :exit_tickets
       resources :students
       resources :producers
+      resources :instructors
     end
-  end
+  # end
 
-  resources :producers
+  # resources :producers
 
-  shallow do 
+  # shallow do 
     resources :exit_tickets do
       resources :questions
     end
-  end
+  # end
 
-  shallow do
+  # shallow do
     resources :questions do
       resources :responses
     end
-  end
+  # end
 
-  shallow do
+  # shallow do
     resources :students do 
       resources :responses
     end
-  end
+  # end
   
 
 
