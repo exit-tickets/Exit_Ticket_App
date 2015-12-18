@@ -1,12 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
-@font-face { 
-  font-family: 'MyWebFont';
-  src: url('WebFont.eot');
-  src: url('WebFont.eot?iefix') format('eot'),
-       url('WebFont.woff') format('woff'),
-       url('WebFont.ttf') format('truetype'),
-       url('WebFont.svg#webfont') format('svg');
-}
 
 body {
   font-family: Oswald;
@@ -19,21 +11,40 @@ body {
 
 h1 {
   font-family: Oswald;
-  font-weight: 400;
   color: white;
-  font-size: 40px;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: Oswald;
+}
+
+h3 {
+  font-family: Oswald;
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: 400;
+}
+
+a {
+  color: #be0201;
+  font-size: 16px;
 }
 
 .wrapper {
-  max-width: 960px;
+  max-width: 85%;
   margin: 0 auto;
-}
+} 
 
-div {
-  box-sizing:border-box;
-}
-
-.button {
+.create-button {
   background-color: #fa4542;
   box-shadow: 0 5px 0 0 #be0201;
   border-radius: 3px;
@@ -44,50 +55,65 @@ div {
   color: white;
   font-family: Oswald;
   border: none;
+  padding-top: 3px;
   box-sizing: border-box;
 }
 
-.button:hover {
+.create-button:hover {
   background-color: #fe0301;
 }
 
-.button a {
-  font-size: 21px;
+.create-button a {
+  font-size: 22px;
   color: white;
   font-family: Oswald;
   text-decoration: none;
   vertical-align: middle;
 }
 
-.delete-cohort-btn {
-  font-size: 21px;
-  color: black;
-  cursor: pointer;
-  width: 500px;
+.instructors-img, .producers-img, .students-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 5px solid black;
 }
 
-.delete-cohort-btn a {
-  font-family: Oswald;
-  text-decoration: none;
-  vertical-align: middle;
-  color: #404040;
-  font-size: 18px;
-  display: flex;
+.cohort-instructors, .cohort-producers, .cohort-students {
+  margin: 5px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  overflow: auto;
 }
 
-.delete-img {
-   background: #404040;
-   width: 50px;
-   height: 50px;
-   border-radius: 100px;
-   cursor: pointer;
+/*
+.student-names, .student-emails {
+  width: 50%;
+  float: left;
+  text-align: left;
+  margin-left: 5px;
+}*/
+
+.WDI {
+  border: 2px white solid;
+  border-radius: 100px;
+  width: 140px;
+  height: 140px;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: 5px;
 }
 
-.delete-img img {
-  height: 30px;
-  width: 30px;
-  margin-top: 9px;
-}
+
+
+
+
+
+
+
+
+
 
 
 
