@@ -4,6 +4,7 @@
 
 <h2>Login as an Instructor</h2>
 <%= form_tag "/login_instructor" do %>
+  <%= radio_button_tag "user", "instructor" %>
   <%= label_tag :email %>
   <%= text_field_tag :email %>
   <br>
