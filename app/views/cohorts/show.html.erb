@@ -1,33 +1,47 @@
 <div class="cohort-show-page">
   <a href="/">Home</a>
   <a href="/cohorts">Back to All Cohorts</a>
-  <h1>Cohort: <%= @cohort.name %></h1>
-  <div class="cohort-instructors">
-    <h2>Instructors:</h2>
-      <ul>
-        <li> <%= @instructor.first_name %> <%= @instructor.last_name %></li>
-      </ul>
-  </div>
-  <div class="cohort-producers">
-    <h2>Producers:</h2>
-      <ul>
-        <li></li>
-      </ul>
-  </div>
-  <div class="cohort-students">
-    <h2>Students:</h2>
-      <ul>
-        <% @students.each do |student| %>
-        <li> <%= student.first_name %> <%= student.last_name %></li>
-        <% end %>
-    </ul>
-  </div>
-  <div class="create-exit-ticket">
-    <% if current_instructor %>
-     <%= form_tag(exit_ticket_path, method: 'post') do %>
-        <%= hidden_field_tag 'new' %>
-        <%= submit_tag('Create an Exit Ticket') %>
-        <% end %>
-    <% end %>
-  </div>
+    <div class="wrapper">
+      <div class="grid-5-5">
+        <div class="cohort-name">
+        <h1>Cohort: <%= @cohort.name %></h1>
+        </div>
+      </div>
+      <div class="grid-2-5">
+        <div class="cohort-instructors">
+          <h2>Instructors:</h2>
+            <ul>
+              <li> <%= @instructor.first_name %> <%= @instructor.last_name %> </li>
+            </ul>
+        </div>
+      </div>
+      <div class="grid-3-5">
+        <div class"cohort-producers">
+        <h2>Producers:</h2>
+          <ul>
+            <li>List producer here.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-5-5">
+        <div class="cohort-students">
+          <h2>Students:</h2>
+            <ul>
+              <% @students.each do |student| %>
+              <li> <%= student.first_name %> <%= student.last_name %></li>
+              <% end %>
+            </ul>
+        </div>
+      </div>
+      <div class="grid-5-5">
+        <div class"create-exit-ticket">
+          <% if current_instructor %>
+           <%= form_tag(exit_ticket_path, method: 'post') do %>
+              <%= hidden_field_tag 'new' %>
+              <%= submit_tag('Create an Exit Ticket') %>
+              <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
 </div>

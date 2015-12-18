@@ -1,0 +1,38 @@
+body{
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.grid-1-5 {
+  width: 20%;
+  border: 1px solid black;
+}
+
+.grid-2-5 {
+  width: 40%;
+  border: 1px solid black;
+}
+
+.grid-3-5 {
+  width: 60%;
+  border: 1px solid black;
+}
+
+.grid-4-5 {
+  width: 75%;
+  border: 1px solid black;
+}
+
+.grid-5-5 {
+  width: 100%;
+  border: 1px solid black;
+}
+
+
+
