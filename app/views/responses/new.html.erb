@@ -1,0 +1,12 @@
+<h3>Here is your Exit Ticket! </h3>
+
+  
+<%=form_tag "/exit_tickets/#{exit_ticket.id}/responses/new" do %>
+  <% @questions.each do |question|%>
+    <%=label_tag%> <%=question.question.capitalize%>
+    <br>
+    <%= text_area_tag :question %>
+    <br>
+  <% end %>
+  <%=submit_tag "Done" %>
+<% end %>

@@ -1,12 +1,11 @@
 class QuestionsController < ApplicationController
 
 	def index
-		@questions = Question.all
+		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
 	end
 
 	def new 
 		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
-		# binding.pry
 		@new_question = Question.new
 		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
 	end

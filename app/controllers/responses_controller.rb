@@ -1,11 +1,11 @@
 class ResponsesController < ApplicationController
-
-	def index
-		@responses = Response.all
+	
+	def show 
 	end
 
 	def new 
-		@response = Response.new
+		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
+		@exit_ticket = Question.find(:exit_ticket_id)
 	end
 
 	def create 
@@ -16,8 +16,5 @@ class ResponsesController < ApplicationController
 			})
 	end
 
-	def show 
-		@respone = Response.find(params[:id])
-	end
 
 end

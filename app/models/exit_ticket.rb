@@ -14,4 +14,5 @@ class ExitTicket < ActiveRecord::Base
   belongs_to :instructor
   belongs_to :cohort
   has_many :questions
+  has_many :responses
 end
