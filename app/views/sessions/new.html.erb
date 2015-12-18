@@ -9,8 +9,8 @@
   <br>
   <%= label_tag :password %>
   <%= password_field_tag :password %>
-  <input type="hidden" name="role" value="instructor">
   <br>
+  <input type="hidden" name="role" value="instructor">
   <%= submit_tag "Log In" %>
 <% end %>
 
@@ -23,6 +23,7 @@
   <%= label_tag :password %>
   <%= password_field_tag :password %>
   <br>
+  <input type="hidden" name="role" value="student">
   <%= submit_tag "Log In" %>
 <% end %>
 
@@ -35,6 +36,7 @@
   <%= label_tag :password %>
   <%= password_field_tag :password %>
   <br>
+  <input type="hidden" name="role" value="producer">
   <%= submit_tag "Log In" %>
 <% end %>
 
