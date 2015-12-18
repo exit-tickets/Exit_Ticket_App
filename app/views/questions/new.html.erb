@@ -1,16 +1,13 @@
 <h1>What are the Questions?</h1>
 
-<% if @question %>
 
-<p><%= @question.question %></p>
 
-<% elsif @questions %>
-<%= @questions.each do |question| %>
+<% if @questions.any? %>
 	<ol>
-	<li><%= question.question %></li>
+	<% @questions.each do |question| %>
+		<li><%= question.question %></li>
+	<% end %>
 	</ol>
-
-<% end %>
 
 <% else %>
 	<p>Why no questions?</p>
