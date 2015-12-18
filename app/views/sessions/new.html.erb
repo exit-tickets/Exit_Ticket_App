@@ -1,42 +1,21 @@
 <h1> General Assembly </h1>
 <h2> Exit Ticket App </h2>
 
-
-<h2>Login as an Instructor</h2>
-<%= form_tag "/login_instructor" do %>
+<h3>Login:</h3> 
+<%= form_tag "/login" do %>
+  <%=label_tag :instructor %>:
+  <%= radio_button_tag "role", "instructor"%>
+  <%= label_tag :student %>:
+  <%= radio_button_tag "role", "student" %>
+  <%= label_tag :producer %>:
+  <%= radio_button_tag "role", "producer" %>
+  <br>
   <%= label_tag :email %>
   <%= text_field_tag :email %>
   <br>
   <%= label_tag :password %>
   <%= password_field_tag :password %>
   <br>
-  <input type="hidden" name="role" value="instructor">
-  <%= submit_tag "Log In" %>
-<% end %>
-
-
-<h2>Login as a Student</h2> 
-<%= form_tag "/login_student" do %>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <br>
-  <input type="hidden" name="role" value="student">
-  <%= submit_tag "Log In" %>
-<% end %>
-
-
-<h2>Login as a Producer</h2>
-<%= form_tag "/login_producer" do %>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <br>
-  <input type="hidden" name="role" value="producer">
   <%= submit_tag "Log In" %>
 <% end %>
 

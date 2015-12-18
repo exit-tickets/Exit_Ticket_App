@@ -2,10 +2,7 @@ Rails.application.routes.draw do
   
   root 'sessions#new'
   get '/login' => 'sessions#new'
-  post '/login_producer' => 'sessions#create_producer'
-  post '/login_instructor' => 'sessions#create_instructor'
-  post '/login_student' => 'sessions#create_student'
-  # post '/login' => 'sessions#create'
+  post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   get '/register_student' => 'students#new'
   get '/register_producer' => 'producers#new'
