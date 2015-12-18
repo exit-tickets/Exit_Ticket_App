@@ -6,14 +6,16 @@ class CohortsController < ApplicationController
 
 	def new
 		@cohort = Cohort.new
+		@instructor = Instructor.find(params[:instructor_id])
 	end
 
 	def create
+		@instructor = Instructor.find(params[:instructor_id])
 		@cohort = Cohort.create({
 			instructor_id: params[:instructor_id],
 			name: params[:name]
 			})
-		redirect_to cohorts_path
+		redirect_to @instructor
 	end
 
 	def show

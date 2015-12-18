@@ -1,0 +1,18 @@
+<h1>Hello Exit Ticket</h1>
+
+<h3>Your Cohort ID is <%= @cohort.id %></h3>
+<h3>Your Instructor ID is <%= @instructor.id %></h3>
+
+<%= form_tag("/exit_tickets", method: "post") do %>
+	<%= label_tag :cohort_id %>
+	<%= text_field_tag :cohort_id %>
+	<br/>
+	<%= label_tag :instructor_id %>
+	<%= text_field_tag :instructor_id %>
+	<br/>
+	<%= label_tag :date %>
+	<%= text_field_tag :date %>
+	<br/>
+	<%= submit_tag "Submit" %>
+<% end %>
+

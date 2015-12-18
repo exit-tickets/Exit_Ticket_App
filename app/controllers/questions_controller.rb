@@ -5,15 +5,19 @@ class QuestionsController < ApplicationController
 	end
 
 	def new 
-		@question = Question.new
+		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
+		@new_question = Question.new
+		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
 	end
 
 	def create
+		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
 		@question = Question.create({
 			exit_ticket_id: params[:exit_ticket_id],
 			question: params[:question]
 			})
-		redirect_to questions_path
+		render :new 
+		return
 	end
 
 	def show
