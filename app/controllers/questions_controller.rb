@@ -6,11 +6,6 @@ class QuestionsController < ApplicationController
 
 	def new 
 		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
-		if @questions
-			if @questions.length <= 1 
-				@question = @questions.first
-			end
-		end
 		@new_question = Question.new
 		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
 	end

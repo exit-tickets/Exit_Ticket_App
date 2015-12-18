@@ -1,3 +1,7 @@
+Instructor.destroy_all
+Cohort.destroy_all
+Student.destroy_all
+
 instructors = Instructor.create([{
   first_name: "Emily", 
   last_name: "Oppenheimer", 
@@ -7,7 +11,7 @@ instructors = Instructor.create([{
 
 cohorts = Cohort.create([{
   name: "Bacon", 
-  instructor_id: 1
+  instructor: Instructor.first
 }])
 
 students = Student.create([{
@@ -15,5 +19,5 @@ students = Student.create([{
   last_name: "Lyon", 
   email: "llyon@empire.com", 
   password: "password123", 
-  cohort_id: 1
+  cohort: Cohort.first
 }])
