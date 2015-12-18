@@ -1,54 +1,36 @@
 Rails.application.routes.draw do
   
-  # root 'welcome#index'
   root 'sessions#new'
   get '/login' => 'sessions#new'
-  post '/login_producer' => 'sessions#create_producer'
-  post '/login_instructor' => 'sessions#create_instructor'
-  post '/login_student' => 'sessions#create_student'
+  post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   get '/register_student' => 'students#new'
   get '/register_producer' => 'producers#new'
   get '/register_instructor' => 'instructors#new'
 
-  # shallow do 
-    resources :instructors do
-      resources :cohorts do
-        resources :exit_tickets
-      end
-    end
-  # end
 
-  # shallow do
-    resources :cohorts do 
-      resources :exit_tickets
-      resources :students
-      resources :producers
-      resources :instructors
-    end
-  # end
+  resources :instructors do
+    resources :cohorts 
+  end
 
-  # resources :producers
+  resources :cohorts do 
+    resources :exit_tickets
+    resources :students
+    resources :producers
+    resources :instructors
+  end
 
-  # shallow do 
-    resources :exit_tickets do
-      resources :questions
-    end
-  # end
+  resources :exit_tickets do
+    resources :questions
+  end
 
-  # shallow do
-    resources :questions do
-      resources :responses
-    end
-  # end
+  resources :questions do
+    resources :responses
+  end
 
-  # shallow do
-    resources :students do 
-      resources :responses
-    end
-  # end
-  
-
+  resources :students do 
+    resources :responses
+  end
 
 
   # Example of regular route:
