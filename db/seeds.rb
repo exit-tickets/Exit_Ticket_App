@@ -1,6 +1,11 @@
 Instructor.destroy_all
 Cohort.destroy_all
 Student.destroy_all
+Question.destroy_all
+ExitTicket.destroy_all
+Response.destroy_all
+Producer.destroy_all
+
 
 instructors = Instructor.create([{
   first_name: "Emily", 
