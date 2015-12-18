@@ -22,12 +22,9 @@
         <% end %>
     </ul>
   </div>
-  <div class="create-exit-ticket">
-    <% if current_instructor %>
-     <%= form_tag(exit_ticket_path, method: 'post') do %>
-        <%= hidden_field_tag 'new' %>
-        <%= submit_tag('Create an Exit Ticket') %>
-        <% end %>
-    <% end %>
-  </div>
+  <!-- took out kims code and put in seperate doc just in case-->
+  <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>/exit_tickets/new">Create new Exit Ticket</a>
 </div>
+
+
+ <!-- /instructors/:instructor_id/cohorts/:cohort_id/exit_tickets/new(.:format)  -->
