@@ -1,4 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@font-face { 
+  font-family: 'MyWebFont';
+  src: url('WebFont.eot');
+  src: url('WebFont.eot?iefix') format('eot'),
+       url('WebFont.woff') format('woff'),
+       url('WebFont.ttf') format('truetype'),
+       url('WebFont.svg#webfont') format('svg');
+}
 
 body {
   font-family: Oswald;
