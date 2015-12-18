@@ -15,4 +15,7 @@
  *= require main_stylesheet
  */
 
+*= require grid
+*= require cohorts
+
 

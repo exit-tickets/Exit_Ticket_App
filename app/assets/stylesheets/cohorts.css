@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+body {
+  font-family: Oswald;
+  font-size: 14px;
+}
+
+.cohort-show-page {
+  text-align: center;
+}
+
+h1, h2, li, p {
+  font-family: Oswald;
+  font-weight: 400;
+  color: black;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+div {
+  box-sizing:border-box;
+}
+
+.button {
+  background-color: #fa4542;
+  box-shadow: 0 5px 0 0 #be0201;
+  border-radius: 3px;
+  margin: 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 21px;
+  color: white;
+  font-family: Oswald;
+  border: none;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #fe0301;
+}
+
+.button a {
+  font-size: 21px;
+  color: white;
+  font-family: Oswald;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.delete-cohort-btn {
+  font-size: 21px;
+  color: black;
+  cursor: pointer;
+  width: 500px;
+}
+
+.delete-cohort-btn a {
+  font-family: Oswald;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #404040;
+  font-size: 18px;
+  display: flex;
+}
+
+.delete-img {
+   background: #404040;
+   width: 50px;
+   height: 50px;
+   border-radius: 100px;
+   cursor: pointer;
+}
+
+.delete-img img {
+  height: 30px;
+  width: 30px;
+  margin-top: 9px;
+}
+
+
+

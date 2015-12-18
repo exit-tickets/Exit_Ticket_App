@@ -1,29 +1,40 @@
 <div class="cohort-show-page">
-  <a href="/">Home</a>
-  <h1>Cohort: <%= @cohort.name %></h1>
-  <div class="cohort-instructors">
-    <h2>Instructors:</h2>
-      <ul>
-        <li> <%= @instructor.first_name %> <%= @instructor.last_name %></li>
-      </ul>
-  </div>
-  <div class="cohort-producers">
-    <h2>Producers:</h2>
-      <ul>
-        <li></li>
-      </ul>
-  </div>
-  <div class="cohort-students">
-    <h2>Students:</h2>
-      <ul>
-        <% @students.each do |student| %>
-        <li> <%= student.first_name %> <%= student.last_name %></li>
+  <div class="wrapper">
+    <div class="grid-5-5">
+      <div class="cohort-name">
+      <h1>Cohort: <%= @cohort.name %></h1>
+      </div>
+    </div>
+    <div class="grid-1-5">
+      <div class="cohort-instructors">
+        <h2>Instructors:</h2>
+          <ul>
+            <li> <%= @instructor.first_name %> <%= @instructor.last_name %> </li>
+          </ul>
+        <h2>Producers:</h2>
+        <ul>
+          <li>List producer here.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-2-5">
+      <div class="cohort-students">
+        <h2>Students:</h2>
+          <ul>
+            <% @students.each do |student| %>
+            <li> <%= student.first_name %> <%= student.last_name %></li>
+            <% end %>
+          </ul>
+      </div>
+    </div>
+    <div class="grid-2-5">
+      <div class"create-exit-ticket">
+        <% if current_instructor %>
+            <div class="button">
+              <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>/exit_tickets/new">Create Exit Ticket</a>
+            </div>
         <% end %>
-    </ul>
+      </div>
+    </div>
   </div>
-  <!-- took out kims code and put in seperate doc just in case-->
-  <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>/exit_tickets/new">Create new Exit Ticket</a>
 </div>
-
-
- <!-- /instructors/:instructor_id/cohorts/:cohort_id/exit_tickets/new(.:format)  -->

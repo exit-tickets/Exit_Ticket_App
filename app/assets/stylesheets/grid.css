@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.grid-1-5 {
+  width: 20%;
+  border: 1px solid black;
+  height:100vh;
+}
+
+.grid-2-5 {
+  width: 40%;
+  border: 1px solid black;
+  height:100vh;
+}
+
+.grid-5-5 {
+  width: 100%;
+  border: 1px solid black;
+}
+
+
+
