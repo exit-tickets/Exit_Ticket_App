@@ -6,18 +6,18 @@ class QuestionsController < ApplicationController
 
 	def new 
 		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
+		# binding.pry
 		@new_question = Question.new
 		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
 	end
 
 	def create
 		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
-		@question = Question.create({
+			@question = Question.create({
 			exit_ticket_id: params[:exit_ticket_id],
 			question: params[:question]
 			})
-		render :new 
-		return
+		redirect_to new_exit_ticket_question_path(@exit_ticket)
 	end
 
 	def show
@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
 
 	def destroy 
 		question = Question.find(params[:id]).destroy
-			redirect_to questions_path
+		redirect_to questions_path
 	end
 
 end
