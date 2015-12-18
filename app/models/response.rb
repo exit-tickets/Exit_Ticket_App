@@ -12,5 +12,6 @@
 
 class Response < ActiveRecord::Base
   belongs_to :question
+  belongs_to :exit_ticket
   belongs_to :student
 end

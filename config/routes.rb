@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   end
 
   resources :exit_tickets do
-    resources :questions
+    resources :questions 
+    resources :responses
   end
 
   resources :questions do

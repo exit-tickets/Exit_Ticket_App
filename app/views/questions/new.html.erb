@@ -18,8 +18,6 @@
 	<%= text_field_tag :question %>
 	<%= submit_tag "Submit Question" %>
 <% end %>
+ 
 
-
-
-
-<a href="/exit_tickets/<%= @exit_ticket.id %>/questions">Done</a>
+<a href="/exit_tickets/<%=@exit_ticket.id%>/responses/new"> Done </a>
