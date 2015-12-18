@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
 
   resources :instructors do
-    resources :cohorts 
+    resources :cohorts do 
+      resources :exit_tickets
+    end
   end
 
   resources :cohorts do 
