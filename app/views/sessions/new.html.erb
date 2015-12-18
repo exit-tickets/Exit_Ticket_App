@@ -1,5 +1,5 @@
-<h1> General Assembly </h1>
-<h2> Exit Ticket App </h2>
+
+<h1 class= "title"> Exit Ticket App </h1>
 
 <h3>Login:</h3> 
 <%= form_tag "/login" do %>
@@ -20,15 +20,11 @@
 <% end %>
 
 <h3> Or Register as a
+<h3> <%= link_to "Create a New Instructor", "/register_instructor" %> </h3>
+<h3> <%= link_to "Create a New Student", "/register_student" %></h3>
+<h3> <%= link_to "New Producer", "/register_producer" %> </h3>
 
-<%= link_to "New Student", "/register_student" %>
 
-or
 
-<%= link_to "New Producer", "/register_producer" %>
 
-or 
 
-<%= link_to "New Instructor", "/register_instructor" %>
-
-</h3>
