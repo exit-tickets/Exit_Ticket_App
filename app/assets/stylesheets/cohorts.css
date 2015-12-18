@@ -9,10 +9,11 @@ body {
   text-align: center;
 }
 
-h1, h2, li, p {
+h1 {
   font-family: Oswald;
   font-weight: 400;
-  color: black;
+  color: white;
+  font-size: 40px;
 }
 
 .wrapper {
