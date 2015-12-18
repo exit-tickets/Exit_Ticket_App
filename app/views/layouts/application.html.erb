@@ -8,13 +8,13 @@
 </head>
 <body>
   <header>
-
-    <% if session[:user_id] %>
-      <%= button_to "Logout", '/logout', {method: 'delete'} %>
-    <% else %>
-      <%= link_to 'Login', '/login' %>
-    <% end %>
-
+    <%= image_tag("ga-logo.png", alt: "logo", :class => 'logo') %>
+    <div class="logout-div">
+      <% if session[:user_id] %>
+        
+        <%= button_to "Logout", "/logout", {:method => 'delete', :class => 'button logout'} %>
+      <% end %>
+    </div>
   </header>
 
 <%= yield %>

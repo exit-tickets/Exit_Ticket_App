@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require main_stylesheet
  */
 
 *= require grid
 *= require cohorts
+
 
