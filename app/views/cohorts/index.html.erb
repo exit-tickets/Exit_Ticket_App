@@ -4,7 +4,7 @@
   <div class="list-cohorts">
     <ul>
       <% @cohorts.each do |cohort| %>
-      <li><a href="/cohorts/:id"><%= cohort.name %></a></li>
+      <li><a href="/cohorts/<%= cohort.id %>"><%= cohort.name %></a></li>
       <% end %>
     </ul>
   </div>

@@ -1,18 +1,28 @@
 <h1>What are the Questions?</h1>
 
+<% if @question %>
 
+<p><%= @question.question %></p>
+
+<% elsif @questions %>
 <%= @questions.each do |question| %>
-
-	<p><%= question.question %></p>
+	<ol>
+	<li><%= question.question %></li>
+	</ol>
 
 <% end %>
 
+<% else %>
+	<p>Why no questions?</p>
+<% end %>
 
-<%= form_tag "/new_exit_ticket_question" do %>
+
+
+<%= form_tag ("/exit_tickets/#{@exit_ticket.id}/questions") do %>
 	<%= label_tag :question %>
 	<%= text_field_tag :question %>
 	<%= submit_tag "Submit Question" %>
-<%= end %>
+<% end %>
 
 
 <button href="/somewhere***********">Done</button>
