@@ -9,7 +9,7 @@ body {
   text-align: center;
 }
 
-h1, h2, li {
+h1, h2, li, p {
   font-family: Oswald;
   font-weight: 400;
   color: black;
@@ -42,13 +42,43 @@ div {
   background-color: #fe0301;
 }
 
-.delete-cohort-btn {
-   background: #404040;
-   width: 60px;
-   height: 60px;
-   border-radius: 120px;
+.button a {
+  font-size: 21px;
+  color: white;
+  font-family: Oswald;
+  text-decoration: none;
+  vertical-align: middle;
 }
 
+.delete-cohort-btn {
+  font-size: 21px;
+  color: black;
+  cursor: pointer;
+  width: 500px;
+}
+
+.delete-cohort-btn a {
+  font-family: Oswald;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #404040;
+  font-size: 18px;
+  display: flex;
+}
+
+.delete-img {
+   background: #404040;
+   width: 50px;
+   height: 50px;
+   border-radius: 100px;
+   cursor: pointer;
+}
+
+.delete-img img {
+  height: 30px;
+  width: 30px;
+  margin-top: 9px;
+}
 
 
 

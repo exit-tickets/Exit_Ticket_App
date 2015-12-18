@@ -5,23 +5,19 @@
       <h1>Cohort: <%= @cohort.name %></h1>
       </div>
     </div>
-    <div class="grid-2-5">
+    <div class="grid-1-5">
       <div class="cohort-instructors">
         <h2>Instructors:</h2>
           <ul>
             <li> <%= @instructor.first_name %> <%= @instructor.last_name %> </li>
           </ul>
-      </div>
-    </div>
-    <div class="grid-3-5">
-      <div class"cohort-producers">
-      <h2>Producers:</h2>
+        <h2>Producers:</h2>
         <ul>
           <li>List producer here.</li>
         </ul>
       </div>
     </div>
-    <div class="grid-5-5">
+    <div class="grid-2-5">
       <div class="cohort-students">
         <h2>Students:</h2>
           <ul>
@@ -31,14 +27,13 @@
           </ul>
       </div>
     </div>
-    <div class="grid-5-5">
+    <div class="grid-2-5">
       <div class"create-exit-ticket">
         <% if current_instructor %>
-            <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>/exit_tickets/new">Create new Exit Ticket</a>
+            <div class="button">
+              <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>/exit_tickets/new">Create Exit Ticket</a>
+            </div>
         <% end %>
-      </div>
-      <div class="delete-cohort-btn">
-        <img src="../images/trash-icon.png">
       </div>
     </div>
   </div>

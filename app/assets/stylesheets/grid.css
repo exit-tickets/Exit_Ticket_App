@@ -12,21 +12,13 @@ body{
 .grid-1-5 {
   width: 20%;
   border: 1px solid black;
+  height:100vh;
 }
 
 .grid-2-5 {
   width: 40%;
   border: 1px solid black;
-}
-
-.grid-3-5 {
-  width: 60%;
-  border: 1px solid black;
-}
-
-.grid-4-5 {
-  width: 75%;
-  border: 1px solid black;
+  height:100vh;
 }
 
 .grid-5-5 {
