@@ -1,0 +1,9 @@
+<h1>Here are some Exit Tickets</h1>
+
+<div class="list-tickets">
+	<ul>
+		<% @exit_tickets.each do |exit_ticket| %>
+		<li><a href="/exit_tickets/<%= exit_ticket.id %>"><%= exit_ticket.date %></a></li>
+		<% end %>
+	</ul>
+</div>

@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   # shallow do 
     resources :instructors do
-      resources :cohorts 
+      resources :cohorts do
+        resources :exit_tickets
+      end
     end
   # end
 

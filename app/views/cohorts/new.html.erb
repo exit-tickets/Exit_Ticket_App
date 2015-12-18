@@ -1,0 +1,14 @@
+<h1> Hey, <%=@instructor.first_name %>! Create a new cohort right here!</h1>
+<h3>Your Instructor ID is <%= @instructor.id %></h3>
+
+<%= form_tag("/cohorts", method: "post") do %>
+	<%= label_tag :instructor_id %>
+	<%= text_field_tag :instructor_id %>
+	<br/>
+	<%= label_tag :name_of_cohort %>
+	<%= text_field_tag :name %>
+	<br/>
+	<%= submit_tag "Create Cohort" %>
+<% end %>
+
+
