@@ -14,14 +14,6 @@
  *= require_self
  */
 
-body {
-  color: black;
-}
+*= require grid
+*= require cohorts
 
-h1 {
-  color: black;
-}
-
-h2 {
-  color: black;
-}

@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
 body {
-  font-family: Helvetica;
+  font-family: Oswald;
   font-size: 14px;
 }
 
@@ -8,7 +10,7 @@ body {
 }
 
 h1, h2, li {
-  font-family: Helvetica;
+  font-family: Oswald;
   font-weight: 400;
   color: black;
 }
@@ -21,4 +23,32 @@ h1, h2, li {
 div {
   box-sizing:border-box;
 }
+
+.button {
+  background-color: #fa4542;
+  box-shadow: 0 5px 0 0 #be0201;
+  border-radius: 3px;
+  margin: 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 21px;
+  color: white;
+  font-family: Oswald;
+  border: none;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #fe0301;
+}
+
+.delete-cohort-btn {
+   background: #404040;
+   width: 60px;
+   height: 60px;
+   border-radius: 120px;
+}
+
+
+
 

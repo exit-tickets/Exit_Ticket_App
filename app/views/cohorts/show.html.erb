@@ -38,9 +38,12 @@
           <% if current_instructor %>
            <%= form_tag(exit_ticket_path, method: 'post') do %>
               <%= hidden_field_tag 'new' %>
-              <%= submit_tag('Create an Exit Ticket') %>
+              <%= submit_tag('Create Exit Ticket', :class=> 'button exit-ticket-btn') %>
               <% end %>
           <% end %>
+        </div>
+        <div class="delete-cohort-btn">
+          <img src="../images/trash-icon.png">
         </div>
       </div>
     </div>
