@@ -1,12 +1,19 @@
-<h3>Here is your Exit Ticket! </h3>
+<h3>Here is your Exit Ticket!</h3>
 
   
-<%=form_tag "/exit_tickets/#{exit_ticket.id}/responses/new" do %>
+<%=form_tag "/exit_tickets/#{@exit_ticket.id}/responses/new" do %>
   <% @questions.each do |question|%>
     <%=label_tag%> <%=question.question.capitalize%>
     <br>
-    <%= text_area_tag :question %>
+    <%= text_area_tag :response, nil, size: "50x5" %>
     <br>
+    <%= hidden_field_tag "question_id", "#{question.id}" %>
+    <%= hidden_field_tag "student_id", "#{@student.id}" %>
+    <%= hidden_field_tag "exit_ticket_id", "#{exit_ticket.id}" %>
   <% end %>
   <%=submit_tag "Done" %>
 <% end %>
+
+<!-- This might need to be separate forms for each question's response rather than one form for all the responses because we dont have routes for responses/new we have routes for responses/response_id/new....so that would mean separate forms/submit buttons for each question/response pair-->
+
+<!-- Might have to do something where we redirect_to the same page with each new question of the exit ticket on at a time with an if/else that says elsif @response.last with a final done button that redirects to the student's cohort page  -->
