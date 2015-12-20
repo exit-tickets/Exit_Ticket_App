@@ -2,36 +2,47 @@
   <div class="wrapper">
     <div class="grid-5-5">
       <div class="cohort-name">
-      <h1>Cohort: <%= @cohort.name %></h1>
+      <h1>Welcome to <%= @cohort.name %></h1>
       </div>
     </div>
-    <div class="grid-1-5">
+    <div class="grid-2-5">
       <div class="cohort-instructors">
-        <h2>Instructors:</h2>
-          <ul>
-            <li> <%= @instructor.first_name %> <%= @instructor.last_name %> </li>
-          </ul>
-        <h2>Producers:</h2>
-        <ul>
-          <li>List producer here.</li>
-        </ul>
+        <%= image_tag("instructors.png", :alt => "Instructors", :class => "instructors-img") %>
+        <h2>INSTRUCTORS</h2>
+            <p> <%= @instructor.first_name %> <%= @instructor.last_name %>:
+            <a href="mailto:<%=@instructor.email%>@email.com %>"><%= @instructor.email %></a>
+            </p>
+      </div>
+      <div class="cohort-producers">
+        <%= image_tag("producers.png", :alt => "Producers", :class => "producers-img") %>
+        <h2>PRODUCERS</h2>
+          <p>Example producer: 
+          <a href="mailto:producer@email.com %>">producer@email.com</a>
+          </p>
       </div>
     </div>
     <div class="grid-2-5">
       <div class="cohort-students">
-        <h2>Students:</h2>
-          <ul>
-            <% @students.each do |student| %>
-            <li> <%= student.first_name %> <%= student.last_name %></li>
-            <% end %>
-          </ul>
+        <%= image_tag("students.png", :alt => "Students", :class => "students-img") %>
+        <h2>STUDENTS</h2>
+          <% @students.each do |student| %>
+          <div class="student-names">
+            <p><%= student.first_name %> <%= student.last_name %>:
+              <a href="mailto:<%= student.email %>"><%= student.email%></a>
+            </p>
+          </div>
+          <% end %>
       </div>
     </div>
-    <div class="grid-2-5">
+    <div class="grid-1-5">
       <div class"create-exit-ticket">
+      <div class="WDI">
+       <h1>WDI</h1>
+      </div>
+      <h3>New York, NY</h3>
         <% if current_instructor %>
-            <div class="button">
-              <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>/exit_tickets/new">Create Exit Ticket</a>
+            <div class="create-button">
+              <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>/exit_tickets/new">CREATE EXIT TICKET</a>
             </div>
         <% end %>
       </div>

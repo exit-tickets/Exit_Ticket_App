@@ -9,13 +9,14 @@ body {
   -o-background-size: cover;
   background-size: cover;
   margin: 0;
+  background-color: black;
   color: white;
 }
 
 
 header {
   position: relative;
-  background-color: rgba(60,60,60,.5);
+  background-color: rgba(0,0,0,.4);
 }
 
 .logo {
