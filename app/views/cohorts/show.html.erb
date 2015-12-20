@@ -10,15 +10,18 @@
         <%= image_tag("instructors.png", :alt => "Instructors", :class => "instructors-img") %>
         <h2>INSTRUCTORS</h2>
             <p> <%= @instructor.first_name %> <%= @instructor.last_name %>:
-            <a href="mailto:<%=@instructor.email%>@email.com %>"><%= @instructor.email %></a>
+            <a href="mailto:<%=@instructor.email%>"><%= @instructor.email %></a>
             </p>
       </div>
       <div class="cohort-producers">
         <%= image_tag("producers.png", :alt => "Producers", :class => "producers-img") %>
         <h2>PRODUCERS</h2>
-          <p>Example producer: 
-          <a href="mailto:producer@email.com %>">producer@email.com</a>
-          </p>
+          <% if @producer %>
+          <p><%= @producer.first_name%> <%= @producer.last_name%>: 
+          <a href="mailto:<%=@producer.email%>"><%=@producer.email%></a></p>
+          <% else %>
+          <p>This course doesn't have a producer yet! </p>
+          <% end %>
       </div>
     </div>
     <div class="grid-2-5">
