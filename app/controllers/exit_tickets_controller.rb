@@ -4,6 +4,14 @@ class ExitTicketsController < ApplicationController
 		@exit_tickets = ExitTicket.all
 	end
 
+	def show
+		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
+		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
+		@responses = Response.where(exit_ticket_id: param[:exit_ticket_id])
+		@instructor = Instructor.find(@exit_ticket.instructor_id)
+		@cohort = Cohort.find(@exit_ticket.cohort_id)
+	end
+
 	def new
 		@exit_ticket = ExitTicket.new
 		@instructor = Instructor.find(params[:instructor_id])
@@ -23,11 +31,6 @@ class ExitTicketsController < ApplicationController
 		# not sure where to redirect- can't seem to redirect somewhere with the exit ticket just created in the path
 	end
 
-	def show
-		@exit_ticket = ExitTicket.find(params[:id])
-		@instructor = Instructor.find(@exit_ticket.instructor_id)
-		@cohort = Cohort.find(@exit_ticket.cohort_id)
-	end
 
 	def destroy
 		exit_ticket = ExitTicket.find(params[:id]).destroy

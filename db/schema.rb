@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151217152324) do
+ActiveRecord::Schema.define(version: 20151218224237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,9 +61,12 @@ ActiveRecord::Schema.define(version: 20151217152324) do
     t.integer  "question_id"
     t.integer  "student_id"
     t.text     "response"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "exit_ticket_id"
   end
+
+  add_index "responses", ["exit_ticket_id"], name: "index_responses_on_exit_ticket_id", using: :btree
 
   create_table "students", force: :cascade do |t|
     t.string   "first_name"
