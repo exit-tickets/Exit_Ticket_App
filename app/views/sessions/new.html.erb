@@ -1,22 +1,31 @@
-<h1 class= "title"> Exit Ticket App </h1>
 
-<h3>Login:</h3> 
-<%= form_tag "/login" do %>
-  <%=label_tag :instructor %>:
-  <%= radio_button_tag "role", "instructor"%>
-  <%= label_tag :student %>:
-  <%= radio_button_tag "role", "student" %>
-  <%= label_tag :producer %>:
-  <%= radio_button_tag "role", "producer" %>
-  <br>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <br>
-  <%= submit_tag "Log In" %>
+<h1 class= "headline"> Exit Tickets </h1>
+
+<div class="login">
+
+  <%= form_tag "/login" do %>
+    <div class="login-radio">
+      <div class="radio" >
+        <%= radio_button_tag "role", "instructor", :class => "radio-btn" %>
+        <%=label_tag :instructor, "Instructor", {:class => "radio-label"} %>
+      </div>
+      <div class="radio">
+        <%= radio_button_tag "role", "student" %>
+        <%= label_tag :student, "Student" %>
+      </div>
+      <div class="radio">
+        <%= radio_button_tag "role", "producer" %>
+        <%= label_tag :producer, "Producer" %>
+      </div>
+    </div> <!-- .login-radio -->
+    <div class="login-credentials">
+      <%= text_field_tag :email, "Enter your e-mail here",{:class => "login-field"} %>
+    <br>
+      <%= password_field_tag :password, "", :class => "login-field" %>
+    </div> <!-- .login-credientials -->
+    <%= submit_tag "Log In", {:class => "button login-btn"} %>
 <% end %>
+</div> <!-- .login -->
 
 <h3> Or Register as a </h3>
 <h3> <%= link_to "Create a New Instructor", "/register_instructor" %> </h3>
