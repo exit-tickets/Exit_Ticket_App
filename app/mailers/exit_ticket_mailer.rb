@@ -1,2 +1,0 @@
-class ExitTicketMailer < ApplicationMailer
-end
