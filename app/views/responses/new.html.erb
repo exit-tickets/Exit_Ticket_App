@@ -2,11 +2,14 @@
  
 
 <%=form_tag "/exit_tickets/#{@exit_ticket.id}/responses" do %>
+  <% @questions.reorder("id, ASC") %>
   <% @questions.each do |question|%>
+
   	<% if Response.find_by(question_id: question.id) %>
+      <% response = Response.find_by(question_id: question.id) %>
   		<br>
     	<%=label_tag%> <%=question.question.capitalize%>
-   		<%=label_tag "You responded" %> 
+   		<%=label_tag %> <%= response %>
   	<% else %>
     	<br>
     	<%=label_tag%> <%=question.question.capitalize%>
@@ -15,11 +18,9 @@
     	<br>
     	<%= hidden_field_tag "question_id", "#{question.id}" %>
   		<%=submit_tag "Submit Response" %>
-  	<% end %>
-  <% end %>
-<% end %>
-
-
+  	<% end %> <!-- if/else -->
+  <% end %> <!-- .each -->
+<% end %> <!-- form -->
 
 <!-- This might need to be separate forms for each question's response rather than one form for all the responses because we dont have routes for responses/new we have routes for responses/response_id/new....so that would mean separate forms/submit buttons for each question/response pair-->
 
