@@ -86,15 +86,8 @@ a {
   border-radius: 10px;
   padding-bottom: 5px;
   overflow: auto;
+  color: black;
 }
-
-/*
-.student-names, .student-emails {
-  width: 50%;
-  float: left;
-  text-align: left;
-  margin-left: 5px;
-}*/
 
 .WDI {
   border: 2px white solid;

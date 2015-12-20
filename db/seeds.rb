@@ -27,3 +27,11 @@ students = Student.create([{
   cohort: Cohort.first
 }])
 
+producers = Producer.create([{
+  first_name: "Michael", 
+  last_name: "Scott", 
+  email: "thatswhatshesaid@gmail.com", 
+  password: "password123",
+}])
+
+
