@@ -10,7 +10,7 @@ instructors = Instructor.create([{
 }])
 
 cohorts = Cohort.create([{
-  name: "Bacon", 
+  name: "Persephone", 
   instructor: Instructor.first
 }])
 
@@ -21,3 +21,4 @@ students = Student.create([{
   password: "password123", 
   cohort: Cohort.first
 }])
+
