@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+body {
+  font-family: Oswald;
+  font-size: 14px;
+  color: white;
+}
+
+.cohort-show-page {
+  text-align: center;
+}
+
+h1 {
+  font-family: Oswald;
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: Oswald;
+}
+
+h3 {
+  font-family: Oswald;
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: 400;
+}
+
+a {
+  color: #be0201;
+  font-size: 16px;
+}
+
+.wrapper {
+  max-width: 85%;
+  margin: 0 auto;
+} 
+
+.create-button {
+  background-color: #fa4542;
+  box-shadow: 0 5px 0 0 #be0201;
+  border-radius: 3px;
+  margin: 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 21px;
+  color: white;
+  font-family: Oswald;
+  border: none;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+
+.create-button:hover {
+  background-color: #fe0301;
+}
+
+.create-button a {
+  font-size: 22px;
+  color: white;
+  font-family: Oswald;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.instructors-img, .producers-img, .students-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 5px solid black;
+}
+
+.cohort-instructors, .cohort-producers, .cohort-students {
+  margin: 5px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  overflow: auto;
+}
+
+/*
+.student-names, .student-emails {
+  width: 50%;
+  float: left;
+  text-align: left;
+  margin-left: 5px;
+}*/
+
+.WDI {
+  border: 2px white solid;
+  border-radius: 100px;
+  width: 140px;
+  height: 140px;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

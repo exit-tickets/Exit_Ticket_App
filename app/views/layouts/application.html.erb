@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ExitTicketApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <%= image_tag("ga-logo.png", alt: "logo", :class => 'logo') %>
+    <div class="logout-div">
+      <% if session[:user_id] %>
+        
+        <%= button_to "Logout", "/logout", {:method => 'delete', :class => 'button logout'} %>
+      <% end %>
+    </div>
+  </header>
+
+<%= yield %>
+
+</body>
+</html>
