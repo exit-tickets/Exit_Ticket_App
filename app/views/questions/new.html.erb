@@ -3,11 +3,13 @@
 
 <% if @questions.any? %>
     <ol>
+
     <% @questions.each do |question| %>
         <li><%= question.question %></li>
     <% end %>
+    
     </ol>
-
+    
 <% else %>
     <p>Why no questions?</p>
 <% end %>
