@@ -9,9 +9,12 @@
       <div class="cohort-instructors">
         <%= image_tag("instructors.png", :alt => "Instructors", :class => "instructors-img") %>
         <h2>INSTRUCTORS</h2>
-            <p> <%= @instructor.first_name %> <%= @instructor.last_name %>:
-            <a href="mailto:<%=@instructor.email%>"><%= @instructor.email %></a>
-            </p>
+          <% if @instructor %>
+          <p><%= @instructor.first_name %> <%= @instructor.last_name %>:
+          <a href="mailto:<%=@instructor.email%>"><%= @instructor.email %></a></p>
+          <% else %>
+          <p>This course doesn't have an instructor yet! </p>
+          <% end %>
       </div>
       <div class="cohort-producers">
         <%= image_tag("producers.png", :alt => "Producers", :class => "producers-img") %>
@@ -28,13 +31,16 @@
       <div class="cohort-students">
         <%= image_tag("students.png", :alt => "Students", :class => "students-img") %>
         <h2>STUDENTS</h2>
+          <% if @students %>
           <% @students.each do |student| %>
           <div class="student-names">
             <p><%= student.first_name %> <%= student.last_name %>:
-              <a href="mailto:<%= student.email %>"><%= student.email%></a>
-            </p>
+              <a href="mailto:<%= student.email %>"><%= student.email %></a></p>
+              <% end %>
+              <% else %>
+              <p>This course doesn't have any students yet.</p>
+            <% end %>
           </div>
-          <% end %>
       </div>
     </div>
     <div class="grid-1-5">

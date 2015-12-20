@@ -8,7 +8,8 @@
 </head>
 <body>
   <header>
-    <%= image_tag("ga-logo.png", alt: "logo", :class => 'logo') %>
+    <%= link_to(image_tag("ga-logo.png", alt: 'General Assembly', :class => 'logo'), '/') %>
+
     <div class="logout-div">
       <% if session[:user_id] %>
         
