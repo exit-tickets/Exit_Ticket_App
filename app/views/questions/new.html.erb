@@ -3,11 +3,13 @@
 
 <% if @questions.any? %>
     <ol>
+
     <% @questions.each do |question| %>
         <li><%= question.question %></li>
     <% end %>
+    
     </ol>
-
+    
 <% else %>
     <p>Why no questions?</p>
 <% end %>
@@ -15,8 +17,10 @@
 
 <%= form_tag("/exit_tickets/#{@exit_ticket.id}/questions") do |f| %>
 	<%= label_tag :question %>
-	<%= text_field_tag :question %>
-	<%= submit_tag "Submit Question" %>
+  <br>
+	<%= text_area_tag :question, nil, size: "50x5" %>
+	<br>
+  <%= submit_tag "Submit Question" %>
 <% end %>
  
 

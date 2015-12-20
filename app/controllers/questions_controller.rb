@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
 
 	def create
 		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
-			@question = Question.create({
+		@question = Question.create({
 			exit_ticket_id: params[:exit_ticket_id],
 			question: params[:question]
 			})
