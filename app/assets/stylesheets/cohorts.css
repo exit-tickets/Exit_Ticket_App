@@ -6,7 +6,7 @@ body {
   color: white;
 }
 
-.cohort-show-page {
+.cohort-show-page, .instructor-show-page {
   text-align: center;
 }
 
@@ -79,7 +79,7 @@ a {
   border-bottom: 5px solid black;
 }
 
-.cohort-instructors, .cohort-producers, .cohort-students {
+.cohort-instructors, .cohort-producers, .cohort-students, .instructor-cohorts {
   margin: 5px;
   margin-bottom: 20px;
   background: white;
@@ -87,6 +87,10 @@ a {
   padding-bottom: 5px;
   overflow: auto;
   color: black;
+}
+
+.instructor-name h1 {
+  text-align: center;
 }
 
 .WDI {
@@ -98,6 +102,12 @@ a {
   margin: 0 auto;
   margin-top: 5px;
 }
+
+.instructor-cohorts {
+  text-align: center;
+}
+
+
 
 
 
