@@ -3,13 +3,19 @@
 
 <%=form_tag "/exit_tickets/#{@exit_ticket.id}/responses" do %>
   <% @questions.each do |question|%>
-    <br>
-    <%=label_tag%> <%=question.question.capitalize%>
-    <br>
-    <%= text_area_tag :response, nil, size: "50x5" %>
-    <br>
-    <%= hidden_field_tag "question_id", "#{question.id}" %>
-  <%=submit_tag "Submit Response" %>
+  	<% if Response.find_by(question_id: question.id) %>
+  		<br>
+    	<%=label_tag%> <%=question.question.capitalize%>
+   		<%=label_tag "You responded" %> 
+  	<% else %>
+    	<br>
+    	<%=label_tag%> <%=question.question.capitalize%>
+    	<br>
+    	<%= text_area_tag :response, nil, size: "50x5" %>
+    	<br>
+    	<%= hidden_field_tag "question_id", "#{question.id}" %>
+  		<%=submit_tag "Submit Response" %>
+  	<% end %>
   <% end %>
 <% end %>
 
