@@ -24,13 +24,21 @@
       <%= password_field_tag :password, "", :class => "login-field" %>
     </div> <!-- .login-credientials -->
     <%= submit_tag "Log In", {:class => "button login-btn"} %>
-<% end %>
+  <% end %>
+  <div class="new-links">
+    <div class="n-link">
+      <%= link_to "New Instructor", "/register_instructor" %> 
+    </div> <!-- .link -->
+    <span class="seperator"> | </span>
+    <div class="n-link">
+      <%= link_to "New Student", "/register_student" %>
+    </div> <!-- .link -->
+    <span class="separator"> | </span>
+    <div class="n-link">
+    <%= link_to "New Producer", "/register_producer" %>
+    </div> <!-- .link -->
+  </div> <!-- .new-links -->
 </div> <!-- .login -->
-
-<h3> Or Register as a </h3>
-<h3> <%= link_to "Create a New Instructor", "/register_instructor" %> </h3>
-<h3> <%= link_to "Create a New Student", "/register_student" %></h3>
-<h3> <%= link_to "New Producer", "/register_producer" %> </h3>
 
 
 

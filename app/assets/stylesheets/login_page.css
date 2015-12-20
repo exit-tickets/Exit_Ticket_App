@@ -13,18 +13,19 @@
   height: 300px;
   width: 50%;
   background: rgba(100, 100, 100, .3);
-  margin: 0 auto;
+  margin: 0 auto 200px auto;
 }
 
 .login-radio {
   width: 100%;
   height: 70px;
-  margin: 20px auto;
+  margin: 20px 0;
 }
 
 .radio {
   display: inline-block;
   margin: 30px 4%;
+  white-space: nowrap;
 }
 
 input[type="radio"] {
@@ -33,7 +34,7 @@ input[type="radio"] {
 
 label {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 10px;
   font: bold 30px 'Oswald', Helvetica, sans-serif;
   text-align: center;
   color: white;
@@ -45,14 +46,37 @@ label {
 }
 
 .login-field {
-  width: 300px;
+  width: 80%;
   height: 30px;
   font: 20px 'Oswald';
   margin: 10px 10px;
 }
 
-.login-btn {
+.new-links {
+  display: inline-block;
+  width: 75%;
   position: absolute;
   bottom: 5px;
+  left: 10px;
+}
+
+.n-link {
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  margin: 0 10px;
+}
+
+.seperator {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.login-btn {
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  bottom: 10px;
   right: 5px;
+
 }
