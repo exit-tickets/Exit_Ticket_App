@@ -11,19 +11,19 @@ body{
 }
 
 .grid-1-5 {
-  width: 20%;
+  min-width: 20%;
   height:100vh;
   margin: 10px;
 }
 
 .grid-2-5 {
-  width: 37%;
+  min-width: 37%;
   height:100vh;
   margin: 10px;
 }
 
 .grid-5-5 {
-  width: 100%;
+  min-width: 100%;
 }
 
 

@@ -2,7 +2,7 @@ class InstructorsController < ApplicationController
 
 	def show 
 		@instructor = Instructor.find(params[:id])
-		# @cohorts = Cohort.find_by(instructor_id: params[:instructor_id])
+		@cohorts = Cohort.find_by(instructor_id: params[:instructor_id])
 	end
 
 	def new
