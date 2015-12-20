@@ -11,18 +11,7 @@ class ResponsesController < ApplicationController
 		# @student = Student.find(session[:user_id]) if current_student
 	end
 
-	def create 
-		# binding.pry
-		# @responses = Response.where(exit_ticket_id: params[:exit_ticket_id])
-		# @responses.each do |response|
-		# 	response = Response.create({
-		# 		question_id: params[:question_id],
-				# student_id: params[:student_id],
-		# 		exit_ticket_id: params[:exit_ticket_id],
-		# 		response: params[:response]
-		# 	})
-		# end
-
+	def create
 		@response = Response.create({
 			response: params[:response], 
 			exit_ticket_id: params[:exit_ticket_id], 
