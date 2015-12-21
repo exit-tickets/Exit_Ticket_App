@@ -1,0 +1,8 @@
+<h1> <%= @student.first_name %>'s Responses to <%= @exit_ticket.date %>'s Exit Ticket </h1>
+
+<% @responses.each do |response| %>
+  <h3> response.question.question.capitalize </h3>
+  <p> response.response.capitalize </p>
+<% end %>
+
+<a href="/students/<%=@student.id%>/responses">Back</a>

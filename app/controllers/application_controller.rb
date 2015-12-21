@@ -4,19 +4,19 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_instructor
-    @current_instructor ||= Instructor.find(session[:user_id]) if session[:user_id]
+    @current_instructor ||= Instructor.find(session[:instructor_id]) if session[:instructor_id]
   end
 
   helper_method :current_instructor
 
   def current_student
-    @current_student ||= Student.find(session[:user_id]) if session[:user_id]
+    @current_student ||= Student.find(session[:student_id]) if session[:student_id]
   end
 
   helper_method :current_student
 
   def current_producer
-    @current_producer ||= Producer.find(session[:user_id]) if session[:user_id]
+    @current_producer ||= Producer.find(session[:producer_id]) if session[:producer_id]
   end
 
   helper_method :current_producer
