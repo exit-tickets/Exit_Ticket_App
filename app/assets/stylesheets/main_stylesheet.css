@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+/* ////////// Global ////////// */
 
-/* ////////// Application.html.erb ////////// */
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 
 body {
   background: url("chalkboard.jpg") no-repeat;
@@ -12,6 +12,29 @@ body {
   background-color: black;
 }
 
+.headline {
+  text-align: center;
+  margin: 35px auto;
+  font: 75px bold 'Oswald', Helvetica, sans-serif;
+  color: white ;
+}
+
+.button {
+ background-color: #fa4542 ;
+ box-shadow: 0 5px 0 0 #be0201 ;
+ border-radius: 3px;
+ font-size: 21px;
+ color: white;
+ font-family: 'Oswald', Helvetica, sans-serif;
+ border: none;
+ box-sizing: border-box;
+}
+
+.button:hover {
+ background-color: #fe0301 ;
+}
+
+/* ////////// Header ////////// */
 
 header {
   position: relative;
@@ -32,22 +55,6 @@ header {
   right: 0;
 }
 
-
-.button {
- background-color: #fa4542 ;
- box-shadow: 0 5px 0 0 #be0201 ;
- border-radius: 3px;
- font-size: 21px;
- color: white;
- font-family: Oswald;
- border: none;
- box-sizing: border-box;
-}
-
-.button:hover {
- background-color: #fe0301 ;
-}
-  
 .logout {
   display: inline-block;
   width: 80px;
