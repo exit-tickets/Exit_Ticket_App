@@ -1,9 +1,9 @@
-<h1>View All Exit Tickets</h1>
-
-<div class="list-tickets">
-	<ul>
-		<% @exit_tickets.each do |exit_ticket| %>
-		<li><a href="/exit_tickets/<%= exit_ticket.id%>/responses"><%= exit_ticket.date %></a></li>
-		<% end %>
-	</ul>
+<div class="list-exit-tickets">
+  <h1>View All Exit Tickets</h1>
+    <div class="ticket-list">
+    <h3>SELECT DATE:</h3>
+		  <% @exit_tickets.ordered.each do |exit_ticket| %>
+		  <p><a href="/exit_tickets/<%= exit_ticket.id%>/responses"><%= exit_ticket.pretty_time %></a></p>
+      <% end %>
+    </div>
 </div>

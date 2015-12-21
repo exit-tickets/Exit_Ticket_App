@@ -15,4 +15,14 @@ class ExitTicket < ActiveRecord::Base
   belongs_to :cohort
   has_many :questions
   has_many :responses
+
+  def pretty_time
+    self.created_at.strftime('%b %d, %Y')
+  end
+
+  def self.ordered
+    all.sort {|x,y| x.id <=> y.id}
+  end
+
 end
+
