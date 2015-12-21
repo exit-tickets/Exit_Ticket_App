@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
 
 	def exit_ticket_email(student)
 		@student = student
-		@url = "/exit_tickets/<%=@exit_ticket.id%>/responses/new"
+		@url= "/exit_tickets/<%=@exit_ticket.id%>/responses/new"
 		mail(to: @student.email, subject: "Hurry up Dummy!")
 	end
 end
