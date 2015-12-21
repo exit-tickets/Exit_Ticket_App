@@ -1,5 +1,6 @@
 <h1 class="headline">Create an Exit Ticket</h1>
 <div class="form-wrap">
+
   <div class="past-questions">
     <br>
     <% if @questions.any? %>
@@ -20,8 +21,6 @@
     <%= submit_tag "Submit Question",{:class => "button submit-question"} %>
   <% end %>
   </div> <!-- .questionaire -->
-<br>
-
 </div> <!-- .form-wrap -->
  <div class="exit-ticket">
    <a class="submit" href="/instructors/<%=@instructor.id%>/exit_tickets/<%= @exit_ticket.id %>/send_email"><button class="button"> Send Exit Ticket</button></a>

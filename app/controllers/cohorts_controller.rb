@@ -22,7 +22,7 @@ class CohortsController < ApplicationController
 		@cohort = Cohort.find(params[:id])
 		@students = @cohort.students
 		@instructor = @cohort.instructor
-		@weather = HTTParty.get("http://www.wunderground.com/conditions?state=NY&city=New+York+City")
+		#@weather = HTTParty.get("http://www.wunderground.com/conditions?state=NY&city=New+York+City")
 	end
 
 	def destroy
