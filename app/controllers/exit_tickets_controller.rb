@@ -35,8 +35,12 @@ class ExitTicketsController < ApplicationController
 		cohort = exit_ticket.cohort
 		@students = Student.where(cohort_id: cohort.id)
 
-		UserMailer.exit_ticket_email(@students).deliver
-		format.html {redirect_to instructor_cohort_path}
+		respond_to do |format|
+			@students.each do |student|
+				UserMailer.exit_ticket_email(student).deliver
+				format.html {redirect_to "/"}
+			end
+		end
 	end
 
 
