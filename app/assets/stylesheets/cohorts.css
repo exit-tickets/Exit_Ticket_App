@@ -10,6 +10,10 @@ body {
   text-align: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 h1 {
   font-family: Oswald;
   color: white;
@@ -43,6 +47,7 @@ a {
 .wrapper {
   max-width: 85%;
   margin: 0 auto;
+  white-space: nowrap;
 } 
 
 .wrapper2 {
@@ -85,13 +90,14 @@ a {
 }
 
 .cohort-instructors, .cohort-producers, .cohort-students, .instructor-cohorts {
-  margin: 5px;
   margin-bottom: 20px;
   background: white;
   border-radius: 10px;
   padding-bottom: 5px;
-  overflow: auto;
+  overflow: hidden;
   color: black;
+  margin: 0 auto;
+  margin: 10px;
 }
 
 .instructor-name h1 {
@@ -117,3 +123,37 @@ a {
   width: 30%;
   margin-bottom: 20px;
 }
+
+.create-new-exit-ticket {
+  margin: 0 auto;
+  width: 50%;
+  display: block;
+  text-align: center;
+}
+
+.create-new-exit-ticket-form label, .create-new-exit-ticket-form input {
+  text-align: center;
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+.submit-ticket  {
+  background-color: transparent;
+  border: 1px solid white;
+  outline: none;
+  font-size: 24px;
+  color: white;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.submit-ticket:hover{
+  background-color: black;
+}
+
+
+
+
+
