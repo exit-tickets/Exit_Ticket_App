@@ -12,15 +12,8 @@
  *
  *= require_tree .
  *= require_self
- *= require_main_stylesheet
- *= require_grid
- *= require_login_page
- *= require_cohorts
+ *= require main_stylesheet
+ *= require grid
+ *= require login_page
+ *= require cohorts
  */
-
-*= require_main_stylesheet
-*= require_grid
-*= require_login_page
-*= require_cohorts
-
-
