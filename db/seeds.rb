@@ -6,7 +6,6 @@ ExitTicket.destroy_all
 Response.destroy_all
 Producer.destroy_all
 
-
 instructors = Instructor.create([{
   first_name: "Emily", 
   last_name: "Oppenheimer", 
