@@ -25,10 +25,8 @@ class ExitTicketsController < ApplicationController
 			date: params[:date],
 			instructor_id: params[:instructor_id],
 			cohort_id: params[:cohort_id]
-			})
-		# redirect_to "/cohorts/#{@cohort.id}/exit_tickets/#{@exit_ticket.id}"                           
-		redirect_to "/exit_tickets/#{@exit_ticket.id}/questions/new"                       
-		# not sure where to redirect- can't seem to redirect somewhere with the exit ticket just created in the path
+			})                         
+		redirect_to "/exit_tickets/#{@exit_ticket.id}/questions/new"
 	end
 
 

@@ -7,6 +7,8 @@ class ResponsesController < ApplicationController
 		@exit_ticket = ExitTicket.find_by(id: params[:exit_ticket_id])
 		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
 		@responses = Response.where(exit_ticket_id: params[:exit_ticket_id])
+		@cohort = @exit_ticket.cohort
+		@student = Student.find(session[:user_id]) if current_student
 	end
 
 	def create
