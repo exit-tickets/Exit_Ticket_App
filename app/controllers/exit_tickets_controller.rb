@@ -29,14 +29,19 @@ class ExitTicketsController < ApplicationController
 		redirect_to "/exit_tickets/#{@exit_ticket.id}/questions/new"
 	end
 
+	def send_email
+		instructor = Instructor.find(session[:instructor_id]) if current_instructor
+		exit_ticket = ExitTicket.find(params[:exit_ticket_id])
+		cohort = exit_ticket.cohort
+		@students = Student.where(cohort_id: cohort.id)
+
+		UserMailer.exit_ticket_email(@students).deliver
+		format.html {redirect_to instructor_cohort_path}
+	end
+
 
 	def destroy
 		exit_ticket = ExitTicket.find(params[:id]).destroy
 		redirect_to exit_tickets_path
 	end
 end
-
-
-# @this_ticket = ExitTicket.find(params[:exit_ticket_id])
-
-# "/exit_tickets/<%= @this_ticket.exit_ticket_id %>/questions/new"

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/register_student' => 'students#new'
   get '/register_producer' => 'producers#new'
   get '/register_instructor' => 'instructors#new'
-  
+  get '/instructors/instructor_id/exit_ticket/exit_ticket_id/send_email' => 'questions#send_email'
 
 
   resources :instructors do
