@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+.form-wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.past-questions {
+  height: 300px;
+  width: 70%;
+  margin: 0 auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: rgba(100, 100, 100, .3);
+  overflow: scroll;
+}
+
+.questionaire {
+  position: relative;
+  height: 200px;
+  width: 70%;
+  margin: 0 auto;
+  background: rgba(50, 50, 50, .3);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.exit-ticket-list {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+  font: 30px bold 'Oswald', Helvetica, sans-serif;;
+}
+
+.question-field {
+  display: block;
+  width: 52%;
+  height: 115px;
+  margin: 5px auto;
+  border-radius: 10px;
+  font: 20px 'Oswald';
+  background: rgb(200, 200, 200);
+  border: none;
+}
+
+.submit-question {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+.exit-ticket{
+  position: relative;
+  height: 100px;
+  width: 100%;
+}
+.submit {
+  position: absolute;
+  margin: 10px auto;
+  right: 7%;
+  bottom: 50%;
+}
