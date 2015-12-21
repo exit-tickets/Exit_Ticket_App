@@ -2,7 +2,7 @@
   <div class="wrapper2">
     <div class="grid-5-5">
       <div class="instructor-name">
-      <h1>Welcome, <%= @instructor.first_name %>.</h1>
+      <h1>Welcome, <%= @instructor.first_name.capitalize %>.</h1>
         <div class="create-button create-cohort">
           <a href="/instructors/<%= @instructor.id %>/cohorts/new">CREATE COHORT</a>
         </div>
