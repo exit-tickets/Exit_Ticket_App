@@ -48,8 +48,9 @@
       <div class="WDI">
        <h1>WDI</h1>
       </div>
-      <h3>New York, NY</h3>
-        <p><%=@weather %></p>
+      <h3>New York, NY
+      <br>
+      <%=@weather["current_observation"]["temp_f"]%>&deg; F</h3>
         <% if current_instructor %>
             <div class="create-button">
               <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>/exit_tickets/new">CREATE EXIT TICKET</a>

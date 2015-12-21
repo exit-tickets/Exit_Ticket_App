@@ -32,7 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'httparty'
 gem 'json'
-gem 'uri'
+
 
 
 group :development, :test do
