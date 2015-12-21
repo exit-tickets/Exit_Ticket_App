@@ -11,7 +11,7 @@
         <div class="list-names">
           <h3>SELECT STUDENT:</h3>
             <% @responses.each do |response| %>
-             <p><a href="/students/<%=response.student_id%>/responses"><%= response.student.first_name.capitalize %> <%= response.student.last_name.capitalize %></a></p>
+             <p><a href="/students/<%=response.student_id%>/responses/<%=response.id%>"><%= response.student.first_name.capitalize %> <%= response.student.last_name.capitalize %></a></p>
             <% end %>
         </div>
       </div>

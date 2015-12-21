@@ -27,10 +27,11 @@ students = Student.create([{
   cohort: Cohort.first
 }])
 
+
 dana = Student.create({
   first_name: "Dana",
   last_name: "Czinsky",
-  email: "DanaCzinsky@gmail.com",
+  email: "exitTicketMailer@gmail.com",
   password: "password123",
   cohort: Cohort.first
 })

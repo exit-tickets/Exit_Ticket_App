@@ -17,9 +17,9 @@
       </div> <!-- .radio -->
     </div> <!-- .login-radio -->
     <div class="credentials">
-      <%= text_field_tag :email, "", {:class => 'text-field', :placeholder =>'Email'}  %>
+      <%= text_field_tag :email, nil, {:class => 'text-field', :placeholder =>'Email'}  %>
       <br>
-      <%= password_field_tag :password, "", {:class => 'text-field', :placeholder => 'Password'} %>
+      <%= password_field_tag :password, nil, {:class => 'text-field', :placeholder => 'Password'} %>
     </div> <!-- .login-credientials -->
     <%= submit_tag "Log In", {:class => "button login-btn"} %>
   <% end %>
