@@ -15,6 +15,6 @@
  *= require main_stylesheet
  *= require grid
  *= require login_registration_pages
- *= require exit_ticket_creation
+ *= require exit-ticket-creation
  *= require cohorts
  */
