@@ -31,8 +31,8 @@ class ExitTicketsController < ApplicationController
 
 	def send_email
 		instructor = Instructor.find(session[:instructor_id]) if current_instructor
-		exit_ticket = ExitTicket.find(params[:exit_ticket_id])
-		cohort = exit_ticket.cohort
+		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
+		cohort = @exit_ticket.cohort
 		@students = Student.where(cohort_id: cohort.id)
 
 		respond_to do |format|
