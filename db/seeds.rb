@@ -27,8 +27,14 @@ students = Student.create([{
   cohort: Cohort.first
 }])
 
-<<<<<<< HEAD
-=======
+dana = Student.create({
+  first_name: "Dana",
+  last_name: "Czinsky",
+  email: "DanaCzinsky@gmail.com",
+  password: "password123",
+  cohort: Cohort.first
+})
+
 producers = Producer.create([{
   first_name: "Michael", 
   last_name: "Scott", 
@@ -37,4 +43,3 @@ producers = Producer.create([{
 }])
 
 
->>>>>>> 01652dbf692320fd1ae0cbf30ff7e6e853c535b9
