@@ -7,17 +7,6 @@ class ResponsesController < ApplicationController
 		@exit_ticket = ExitTicket.find_by(id: params[:exit_ticket_id])
 		@questions = Question.where(exit_ticket_id: params[:exit_ticket_id])
 		@responses = Response.where(exit_ticket_id: params[:exit_ticket_id])
-
-		@questions.ordered.each do |question|
-			if Response.find_by(question_id: question.id)
-				@response = Response.find_by(question_id: question.id)
-			else
-				@question = question.question
-				@response = Response.new
-			end
-		end
-		# @responses = Response.where(exit_ticket_id: params[:exit_ticket_id])
-		# @student = Student.find(session[:user_id]) if current_student
 	end
 
 	def create
