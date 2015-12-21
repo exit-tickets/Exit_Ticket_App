@@ -1,24 +1,27 @@
 <h1 class="headline">Create an Exit Ticket</h1>
 <div class="form-wrap">
-  <% if @questions.any? %>
-    <ol>
-      <% @questions.each do |question| %>
-        <li class="exit-ticket-list"><%= question.question.capitalize %></li>
-      <% end %>
-    </ol>  
-  <% else %>
-      <p class="exit-ticket-list">You haven't created any questions.</p>
-  <% end %>
 
+  <div class="past-questions">
+    <br>
+    <% if @questions.any? %>
+      <ol class="exit-ticket-list">
+        <% @questions.each do |question| %>
+          <li class="question-items"><%= question.question.capitalize %></li>
+        <% end %>
+      </ol>  
+    <% else %>
+        <p class="exit-ticket-list">You haven't created any questions.</p>
+    <% end %>
+  </div> <!-- .past-questions -->
+  <div class="questionaire">
+  <br>
   <%= form_tag("/exit_tickets/#{@exit_ticket.id}/questions") do |f| %>
-  	<%= text_area_tag :question, nil, {:class => 'question-field', :placeholder =>'Question'}  %>
-  	<br>
-    <%= submit_tag "Submit Question",{:class => "button"} %>
+    <%= text_area_tag :question, nil, {:class => 'question-field', :placeholder =>'Exit Ticket Question'}  %>
+    <br>
+    <%= submit_tag "Submit Question",{:class => "button submit-question"} %>
   <% end %>
+  </div> <!-- .questionaire -->
 </div> <!-- .form-wrap -->
- 
-<a href="/instructors/<%=@instructor.id%>/cohorts/<%=@cohort.id%>" > Done1 </a>
-<br>
-<a href="/exit_tickets/<%=@exit_ticket.id%>/responses/new"> Done </a>
-<br>
-<a href="/exit_tickets/<%=@exit_ticket.id%>/send_email">Send Email to Students</a>
+ <div class="exit-ticket">
+   <a class="submit" href="/instructors/<%=@instructor.id%>/exit_tickets/<%= @exit_ticket.id %>/send_email"><button class="button"> Send Exit Ticket</button></a>
+</div>
