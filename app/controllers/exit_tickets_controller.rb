@@ -31,15 +31,15 @@ class ExitTicketsController < ApplicationController
 
 	def send_email
 		instructor = Instructor.find(session[:instructor_id]) if current_instructor
-		exit_ticket = ExitTicket.find(params[:exit_ticket_id])
-		cohort = exit_ticket.cohort
+		@exit_ticket = ExitTicket.find(params[:exit_ticket_id])
+		cohort = @exit_ticket.cohort
 		@students = Student.where(cohort_id: cohort.id)
 
 		respond_to do |format|
 			@students.each do |student|
-				UserMailer.exit_ticket_email(student).deliver
-				format.html {redirect_to "/"}
+				UserMailer.exit_ticket_email(student, @exit_ticket).deliver_later
 			end
+				format.html {redirect_to "/cohorts/#{cohort.id}"}
 		end
 	end
 
