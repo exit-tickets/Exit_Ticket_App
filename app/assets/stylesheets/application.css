@@ -14,13 +14,10 @@
  *= require_self
  *= require_main_stylesheet
  *= require_grid
- *= require_login_page
+ *= require_login_registration
+ *= require_exit_ticket_creation
  *= require_cohorts
  */
 
-*= require_main_stylesheet
-*= require_grid
-*= require_login_page
-*= require_cohorts
 
 
