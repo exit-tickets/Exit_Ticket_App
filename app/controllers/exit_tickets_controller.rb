@@ -37,9 +37,9 @@ class ExitTicketsController < ApplicationController
 
 		respond_to do |format|
 			@students.each do |student|
-				UserMailer.exit_ticket_email(student).deliver
-				format.html {redirect_to "/"}
+				UserMailer.exit_ticket_email(student, @exit_ticket).deliver_later
 			end
+				format.html {redirect_to "/cohorts/#{cohort.id}"}
 		end
 	end
 
