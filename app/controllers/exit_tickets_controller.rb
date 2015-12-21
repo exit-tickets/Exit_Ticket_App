@@ -35,8 +35,3 @@ class ExitTicketsController < ApplicationController
 		redirect_to exit_tickets_path
 	end
 end
-
-
-# @this_ticket = ExitTicket.find(params[:exit_ticket_id])
-
-# "/exit_tickets/<%= @this_ticket.exit_ticket_id %>/questions/new"
