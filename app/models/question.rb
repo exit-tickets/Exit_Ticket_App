@@ -13,4 +13,10 @@ class Question < ActiveRecord::Base
   belongs_to :exit_ticket
   belongs_to :instructor
   has_many :responses
+
+
+  def self.ordered
+    all.sort {|x,y| x.id <=> y.id}
+  end
+
 end

@@ -1,10 +1,35 @@
-<h2> Welcome <%=@instructor.first_name %>! </h2>
-
-<% @instructor.cohorts.each do |cohort| %>
-
-  <p><a href="/instructors/<%=@instructor.id%>/cohorts/<%=cohort.id%>"> <%= cohort.name %></a> </p>
-
-<% end %>
-
-<a href="/instructors/<%= @instructor.id %>/cohorts/new">Create a new Cohort</a>
-
+<div class="instructor-show-page">
+  <div class="wrapper">
+    <div class="grid-5-5">
+      <div class="instructor-name">
+      <h1>Welcome, <%= @instructor.first_name %>.</h1>
+      </div>
+    </div>
+    <div class="grid-2-5">
+      <div class="instructor-cohorts">
+        <%= image_tag("cohorts.png", :alt => "Cohorts", :class => "cohorts-img") %>
+        <h2>YOUR COHORTS</h2>
+          <% if @cohorts %>
+          <% @instructor.cohorts.each do |cohort| %>
+          <a href="/instructors/<%= @instructor.id %>/cohorts/<%= @cohort.id %>"</a>
+          <% end %>
+          <% else %>
+          <p>You don't currently teach any cohorts.</p>
+          <% end %>
+      </div>
+    </div>
+    <div class="grid-1-5">
+      <div class"create-cohort">
+      <div class="WDI">
+       <h1>WDI</h1>
+      </div>
+      <h3>New York, NY</h3>
+        <% if current_instructor %>
+            <div class="create-button">
+              <a href="/instructors/<%= @instructor.id %>/cohorts/new">CREATE COHORT</a>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
