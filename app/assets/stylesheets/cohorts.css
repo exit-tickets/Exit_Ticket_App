@@ -233,28 +233,36 @@ a {
   margin-top: 40px;
 }
 
-.response-form .label {
-  text-align: center;
-  font-size: 24px;
+.response-form {
+  font-size: 18px;
   font-family: Helvetica;
-  font-weight: 300;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
 }
 
-.response-form .submit-response  {
-  background-color: transparent;
+.submit-response-btn {
   border: 1px solid white;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
-  padding: 5px;
-  cursor: pointer;
+  background-color: #007acc;
+  border-radius: 3px;
+  margin: 5px;
+  margin-bottom: 50px;
 }
 
-.response-form p .question {
-  font-size: 14px;
-  font-family: Helvetica;
+.done-with-ticket-btn {
+  outline: none;
+  border: 1px solid white;
+  font-size: 26px;
+  color: white;
+  background-color: #2eb82e;
+  border-radius: 3px;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
 }
-
 
 
 

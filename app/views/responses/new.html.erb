@@ -4,26 +4,24 @@
       <div class="respond-to-ticket">
         <h1>Fill Out Your Exit Ticket</h1>
           <div class="response-form">
-          <% @questions.ordered.each do |question|%>
-          <%=form_tag "/exit_tickets/#{@exit_ticket.id}/responses" do %>
+            <% @questions.ordered.each do |question|%>
+            <%=form_tag "/exit_tickets/#{@exit_ticket.id}/responses" do %>
             <% if Response.find_by(question_id: question.id) %>
+                <p style="color: white"><%=label_tag %><%=question.question.capitalize%></p>
+                <p style="color: gray"><%=label_tag %><%=Response.find_by(question_id: question.id).response %></p>
               <br>
-              <%=label_tag %> <%=question.question.capitalize%>
               <br>
-              <%=label_tag "Here's your answer"%>
-              <%=label_tag %> <%=Response.find_by(question_id: question.id).response %>
             <% else %>
-              <br>
-              <%=label_tag%> <%=question.question.capitalize%>
-              <br>
+              <p><%=label_tag%> <%=question.question.capitalize%></p>
               <%= text_area_tag :response, nil, size: "50x5" %>
               <br>
               <%= hidden_field_tag "question_id", "#{question.id}" %>
-              <%=submit_tag "Submit Response", :class=> "submit-response" %>
+              <%=submit_tag "Submit & Continue", :class => 'submit-response-btn'%>
             <% end %>
-          <% end %>
-        <% end %>
-        </div>
+            <% end %>
+            <% end %>
+            <%= button_to "SUBMIT TICKET", cohort_path(@cohort), :class => "done-with-ticket-btn", :method => :get %>
+          </div>
       </div>
     </div>
   </div>
