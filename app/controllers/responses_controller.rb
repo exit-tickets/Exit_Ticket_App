@@ -1,6 +1,10 @@
 class ResponsesController < ApplicationController
 	
 	def show 
+		@student = Student.find(params[:student_id])
+		@response = Response.find(params[:id])
+		@exit_ticket = ExitTicket.find(@respsonse.exit_ticket_id)
+		@responses = Response.find_by(exit_ticket_id: @exit_ticket.id)
 	end
 
 	def new 
