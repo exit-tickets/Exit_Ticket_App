@@ -14,7 +14,6 @@ class Question < ActiveRecord::Base
   belongs_to :instructor
   has_many :responses
 
-
   def self.ordered
     all.sort {|x,y| x.id <=> y.id}
   end

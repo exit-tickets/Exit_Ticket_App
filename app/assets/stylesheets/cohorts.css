@@ -68,13 +68,35 @@ a {
   border: none;
   padding-top: 3px;
   box-sizing: border-box;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.past-tix-button {
+  background-color: #007acc;
+  box-shadow: 0 5px 0 0 #004c80;
+  border-radius: 3px;
+  margin: 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 21px;
+  color: white;
+  font-family: Oswald;
+  border: none;
+  padding-top: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.past-tix-button:hover {
+  background-color: #006ab3;
 }
 
 .create-button:hover {
   background-color: #fe0301;
 }
 
-.create-button a {
+.create-button a, .past-tix-button a {
   font-size: 22px;
   color: white;
   font-family: Oswald;
@@ -138,7 +160,7 @@ a {
   font-weight: 300;
 }
 
-.submit-ticket  {
+.submit-ticket {
   background-color: transparent;
   border: 1px solid white;
   outline: none;
@@ -153,6 +175,85 @@ a {
   background-color: black;
 }
 
+.list-exit-tickets {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.list-exit-tickets h3, .response-names h3 {
+  font-size: 30px;
+  color: gray;
+  font-weight: 400;
+}
+
+.list-exit-tickets a, .list-names a {
+  font-size: 22px;
+  font-family: Helvetica;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list-exit-tickets a:hover, .list-names a:hover {
+  color: #fe0301;
+}
+
+.ticket-list, .list-names {
+  background-color: rgba(0,0,0,.4);
+  width: 40%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 6px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.date-of-ticket {
+  margin: 0 auto;
+  width: 85%;
+  text-align: center;
+}
+
+.response-names a {
+  margin: 0 auto;
+  width: 85%;
+  text-align: center;
+  font-size: 22px;
+}
+
+.respond-to-ticket {
+  background-color: rgba(0,0,0,.4);
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 60%;
+  text-align: center;
+  border-radius: 6px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.response-form .label {
+  text-align: center;
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+.response-form .submit-response  {
+  background-color: transparent;
+  border: 1px solid white;
+  outline: none;
+  font-size: 14px;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.response-form p .question {
+  font-size: 14px;
+  font-family: Helvetica;
+}
 
 
 
