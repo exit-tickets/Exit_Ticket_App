@@ -1,11 +1,11 @@
-<h1>Exit Ticket</h1>
-
-<%= form_tag("/exit_tickets", method: "post") do %>
-	<%= hidden_field_tag "cohort_id", "#{@cohort.id}" %>
-	<%= hidden_field_tag "instructor_id", "#{@instructor.id}" %>
-	<%= label_tag :date %>: 
-	<%= date_field_tag :date %>
-	<br/>
-	<%= submit_tag "Submit" %>
-<% end %>
+<div class='create-new-exit-ticket'>
+  <h1>Create Your Exit Ticket</h1>
+    <%= form_tag("/exit_tickets", method: "post", :class => "create-new-exit-ticket-form") do %>
+     <%= hidden_field_tag "cohort_id", "#{@cohort.id}" %>
+  	 <%= hidden_field_tag "instructor_id", "#{@instructor.id}" %>
+  	 <%= label_tag "Choose date:" %>
+  	 <%= date_field_tag :date %>
+     <%= submit_tag "Submit", :class => "submit-ticket" %>
+    <% end %>
+</div>
 

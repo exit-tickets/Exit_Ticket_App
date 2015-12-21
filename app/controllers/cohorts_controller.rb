@@ -21,7 +21,7 @@ class CohortsController < ApplicationController
 	def show
 		@cohort = Cohort.find(params[:id])
 		@students = @cohort.students
-		@instructor = Instructor.find(params[:instructor_id])
+		@instructor = @cohort.instructor
 	end
 
 	def destroy

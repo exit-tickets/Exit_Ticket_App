@@ -14,13 +14,13 @@ class SessionsController < ApplicationController
 		end
 
 		if instructor && instructor.authenticate(params[:password]) 
-			session[:user_id] = instructor.id
+			session[:instructor_id] = instructor.id
 			redirect_to "/instructors/#{instructor.id}"
 		elsif student && student.authenticate(params[:password])
-			session[:user_id] = student.id 
-			redirect_to "/"
+			session[:student_id] = student.id 
+			redirect_to "/cohorts/#{student.cohort.id}"
 		elsif producer && producer.authenticate(params[:password])
-			session[:user_id] = producer.id 
+			session[:producer_id] = producer.id 
 			redirect_to "/"
 		else
 			render :new
@@ -28,7 +28,9 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
-		session[:user_id] = nil
+		session[:instructor_id] = nil
+		session[:student_id] = nil
+		session[:producer_id] = nil
 		redirect_to '/login'
 	end
 end
