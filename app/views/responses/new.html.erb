@@ -1,21 +1,19 @@
-<h3>Here is your Exit Ticket!</h3>
- 
-<% if @responses.any? %>
-  <ol>
-    <% @responses.each do |response| %>
-      <li> <%=response.response%> </li>
-    <% end %>
-  </ol>
+<% @questions.ordered.each do |question|%>
+  <%=form_tag "/exit_tickets/#{@exit_ticket.id}/responses" do %>
+    <% if Response.find_by(question_id: question.id) %>
+      <br>
+      <%=label_tag%> <%=question.question.capitalize%>
+      <%=label_tag "You responded" %>
+      <%=label_tag%> <%=Response.find_by(question_id: question.id).response %>
+    <% else %>
+      <br>
+      <%=label_tag%> <%=question.question.capitalize%>
+      <br>
+      <%= text_area_tag :response, nil, size: "50x5" %>
+      <br>
+      <%= hidden_field_tag "question_id", "#{question.id}" %>
+      <%=submit_tag "Submit Response" %>
+    <% end %> <!-- if/else -->
+  <% end %> <!-- form -->
+<% end %> <!-- .each -->
 
-<% else %>
-  <p> You have not responded yet </p>
-<% end %>
-
-
-<%= form_tag("/exit_tickets/#{@exit_ticket.id}/responses") do %>
-  <%= label_tag%> <%= @question.capitalize %>
-  <br>
-  <%= text_area_tag :response, nil, size: "50x5" %>
-  <br>
-  <%= submit_tag "Submit Question" %>
-<% end %>
