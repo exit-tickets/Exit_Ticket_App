@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 			redirect_to "/cohorts/#{student.cohort.id}"
 		elsif producer && producer.authenticate(params[:password])
 			session[:producer_id] = producer.id 
-			redirect_to "/"
+			redirect_to "/cohorts/#{producer.cohort.id}"
 		else
 			render :new
 		end
