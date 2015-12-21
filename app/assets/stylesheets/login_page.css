@@ -2,6 +2,7 @@
 
 .headline {
   text-align: center;
+  margin: 35px auto;
   font: 75px bold 'Oswald', Helvetica, sans-serif;
   color: white ;
 }
@@ -10,7 +11,7 @@
 
 .login {
   position: relative;
-  height: 300px;
+  height: 330px;
   width: 50%;
   background: rgba(100, 100, 100, .3);
   margin: 0 auto 200px auto;
@@ -28,10 +29,6 @@
   white-space: nowrap;
 }
 
-input[type="radio"] {
-  margin-left: 10px;
-}
-
 label {
   display: inline-block;
   margin: 0 10px;
@@ -40,16 +37,40 @@ label {
   color: white;
 }
 
-.login-credentials {
-  width: 50%;
-  margin: 0 auto;  
+input[type="radio"] {
+  margin-left: 10px;
 }
 
-.login-field {
-  width: 80%;
-  height: 30px;
+.credentials {
+  width: 75%;
+  height: 50%;
+  margin: 10px auto;  
+}
+
+.text-field {
+  display: block;
+  width: 76%;
+  height: 42px;
+  margin: 5px auto;
   font: 20px 'Oswald';
-  margin: 10px 10px;
+  background: rgb(200, 200, 200);
+  border: none;
+}
+
+.new-name {
+  width: 76%;
+  margin: 0 auto ;
+}
+
+.new-name input:last-child {
+  margin-left: 4.15%;
+
+}
+
+.half-field {
+  display: inline-block;
+  margin: 0 auto;
+  width: 47%;
 }
 
 .new-links {
@@ -79,4 +100,11 @@ label {
   bottom: 10px;
   right: 5px;
 
+}
+
+.back-to-signup {
+  position: absolute;
+  left: 5px;
+  bottom: 8px;
+  font-size: 18px;
 }
