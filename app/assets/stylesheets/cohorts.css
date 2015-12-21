@@ -117,3 +117,37 @@ a {
   width: 30%;
   margin-bottom: 20px;
 }
+
+.create-new-exit-ticket {
+  margin: 0 auto;
+  width: 50%;
+  display: block;
+  text-align: center;
+}
+
+.create-new-exit-ticket-form label, .create-new-exit-ticket-form input {
+  text-align: center;
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+.submit-ticket  {
+  background-color: transparent;
+  border: 1px solid white;
+  outline: none;
+  font-size: 24px;
+  color: white;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.submit-ticket:hover{
+  background-color: black;
+}
+
+
+
+
+
