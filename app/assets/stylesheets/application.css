@@ -13,12 +13,15 @@
  *= require_tree .
  *= require_self
  *= require_main_stylesheet
-*= require_grid
-*= require_cohorts
+ *= require_grid
+ *= require_login_page
+ *= require_cohorts
  */
 
-*= require_grid
-*= require_cohorts
 *= require_main_stylesheet
+*= require_grid
+*= require_login_page
+*= require_cohorts
+
 
 

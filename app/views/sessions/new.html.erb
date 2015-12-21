@@ -1,42 +1,40 @@
-
 <h1 class= "headline"> Exit Tickets </h1>
 
 <div class="login">
-
   <%= form_tag "/login" do %>
     <div class="login-radio">
       <div class="radio" >
-        <%= radio_button_tag "role", "instructor", :class => "radio-btn" %>
-        <%=label_tag :instructor, "Instructor", {:class => "radio-label"} %>
-      </div>
+        <%= radio_button_tag "role", "instructor"%>
+        <%=label_tag :instructor, "Instructor"%>
+      </div> <!-- .radio -->
       <div class="radio">
         <%= radio_button_tag "role", "student" %>
         <%= label_tag :student, "Student" %>
-      </div>
+      </div> <!-- .radio -->
       <div class="radio">
         <%= radio_button_tag "role", "producer" %>
         <%= label_tag :producer, "Producer" %>
-      </div>
+      </div> <!-- .radio -->
     </div> <!-- .login-radio -->
-    <div class="login-credentials">
-      <%= text_field_tag :email, "Enter your e-mail here",{:class => "login-field"} %>
-    <br>
-      <%= password_field_tag :password, "", :class => "login-field" %>
+    <div class="credentials">
+      <%= text_field_tag :email, "", {:class => 'text-field', :placeholder =>'Email'}  %>
+      <br>
+      <%= password_field_tag :password, "", {:class => 'text-field', :placeholder => 'Password'} %>
     </div> <!-- .login-credientials -->
     <%= submit_tag "Log In", {:class => "button login-btn"} %>
   <% end %>
   <div class="new-links">
     <div class="n-link">
       <%= link_to "New Instructor", "/register_instructor" %> 
-    </div> <!-- .link -->
+    </div> <!-- .n-link -->
     <span class="seperator"> | </span>
     <div class="n-link">
       <%= link_to "New Student", "/register_student" %>
-    </div> <!-- .link -->
+    </div> <!-- .n-link -->
     <span class="separator"> | </span>
     <div class="n-link">
     <%= link_to "New Producer", "/register_producer" %>
-    </div> <!-- .link -->
+    </div> <!-- .n-link -->
   </div> <!-- .new-links -->
 </div> <!-- .login -->
 

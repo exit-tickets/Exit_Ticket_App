@@ -1,22 +1,21 @@
-<h1> Welcome To General Assembly </h1>
+<h1 class= "headline"> Student Registration </h1>
 
-<%= form_tag("/students", method: "post") do %>
-  <%= label_tag :first_name %>
-  <%= text_field_tag :first_name %>
-  <br>
-  <%= label_tag :last_name %>
-  <%= text_field_tag :last_name %>
-  <br>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <br>
-  <%= label_tag :password_confirmation %>
-  <%= password_field_tag :password_confirmation %>
-  <br>
-  <%= submit_tag "Register!" %>
-<% end %>
-
-<%= link_to "Home", "/" %>
+<div class= "login">
+  <%= form_tag("/students", method: "post") do %>
+  <div class= "credentials">
+    <br>
+    <div class="new-name">
+      <%= text_field_tag :first_name, "", {:class => 'text-field half-field', :placeholder =>'Last Name'} %>
+      <%= text_field_tag :last_name, "", {:class => 'text-field half-field', :placeholder =>'Last Name'}  %>
+    </div> <!-- .new-name -->
+    <br> 
+    <%= text_field_tag :email, "", {:class => 'text-field', :placeholder =>'Email'}%>
+    <br>
+    <%= password_field_tag :password, "", {:class => 'text-field', :placeholder =>'Password'} %>
+    <br>
+    <%= password_field_tag :password_confirmation, "", {:class => 'text-field', :placeholder =>'Password Confirmation'}%>
+    <br>
+    <%= submit_tag "Register", {:class => "button login-btn"}%>
+    <% end %>
+    <span class="back-to-signup"> <span> Have an Account? </span> <%= link_to "Log In", "/" %> </span>
+  </div> <!-- .credentials -->
