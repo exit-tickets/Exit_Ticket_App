@@ -8,14 +8,24 @@
 </head>
 <body>
   <header>
-    <%= link_to(image_tag("ga-logo.png", alt: 'General Assembly', :class => 'logo'), '/') %>
-
-    <div class="logout-div">
-      <% if session[:user_id] %>
-        
+    <% if current_instructor %>
+      <%= link_to(image_tag("ga-logo.png", alt: 'General Assembly', :class => 'logo'), "/instructors/#{current_instructor.id}") %>  
+      <div class="logout-div">
         <%= button_to "Logout", "/logout", {:method => 'delete', :class => 'button logout'} %>
-      <% end %>
-    </div>
+      </div>
+    <% elsif current_student %>
+      <%= link_to(image_tag("ga-logo.png", alt: 'General Assembly', :class => 'logo'), "/cohorts/#{current_student.cohort_id}") %>
+      <div class="logout-div">
+        <%= button_to "Logout", "/logout", {:method => 'delete', :class => 'button logout'} %>
+      </div>
+    <% elsif current_producer %>
+      <%= link_to(image_tag("ga-logo.png", alt: 'General Assembly', :class => 'logo'), "/cohorts/#{current_producer.cohort_id}") %>
+      <div class="logout-div">
+        <%= button_to "Logout", "/logout", {:method => 'delete', :class => 'button logout'} %>
+      </div>
+    <% else %>
+      <%= link_to(image_tag("ga-logo.png", alt: 'General Assembly', :class => 'logo'), "/") %>
+    <% end %>
   </header>
 
 <%= yield %>

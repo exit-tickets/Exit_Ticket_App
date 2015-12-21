@@ -1,0 +1,16 @@
+<div class="response-index-page">
+  <div class="wrapper">
+    <div class="grid-5-5">
+      <div class="date-of-ticket">
+      <h1>Responses from <%= @exit_ticket.date %></h1>
+      </div>
+    </div>
+    <div class="grid-5-5">
+      <div class="response-name">
+        <h3>Choose a Student:</h3>
+          <% @responses.each do |response| %>
+            <p><%= response.student.first_name %> <%= response.student.last_name %></p>
+      </div>
+    </div>
+  </div>
+</div>
