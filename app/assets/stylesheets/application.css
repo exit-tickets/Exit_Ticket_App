@@ -20,5 +20,5 @@
 *= require_grid
 *= require_cohorts
 *= require_main_stylesheet
-
+*= require_login_page
 

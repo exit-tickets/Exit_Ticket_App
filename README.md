@@ -17,6 +17,8 @@ This full-stack app is meant to facilitate the exit ticket process at GA. This s
 
 ## Front-end Wireframes
 
+View all wireframes [here.](https://gomockingbird.com/projects/fplunk7/jm4ffG)
+
 ## ERD
 
 ![ERD](/app/assets/images/Project3_ERD.png)

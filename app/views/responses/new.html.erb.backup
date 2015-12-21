@@ -1,0 +1,21 @@
+<h3>Here is your Exit Ticket!</h3>
+ 
+<% if @responses.any? %>
+  <ol>
+    <% @responses.each do |response| %>
+      <li> <%=response.response%> </li>
+    <% end %>
+  </ol>
+
+<% else %>
+  <p> You have not responded yet </p>
+<% end %>
+
+
+<%= form_tag("/exit_tickets/#{@exit_ticket.id}/responses") do %>
+  <%= label_tag%> <%= @question.capitalize %>
+  <br>
+  <%= text_area_tag :response, nil, size: "50x5" %>
+  <br>
+  <%= submit_tag "Submit Question" %>
+<% end %>
