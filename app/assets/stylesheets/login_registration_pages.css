@@ -1,12 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 
-.headline {
-  text-align: center;
-  margin: 35px auto;
-  font: 75px bold 'Oswald', Helvetica, sans-serif;
-  color: white ;
-}
-
 /* ///// Login Box ///// */
 
 .login {
@@ -93,6 +86,13 @@ input[type="radio"] {
   margin: 0 5px;
 }
 
+.back-to-signup {
+  position: absolute;
+  left: 5px;
+  bottom: 8px;
+  font-size: 18px;
+}
+
 .login-btn {
   width: 100px;
   height: 40px;
@@ -102,9 +102,3 @@ input[type="radio"] {
 
 }
 
-.back-to-signup {
-  position: absolute;
-  left: 5px;
-  bottom: 8px;
-  font-size: 18px;
-}

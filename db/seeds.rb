@@ -27,6 +27,7 @@ students = Student.create([{
   cohort: Cohort.first
 }])
 
+
 dana = Student.create({
   first_name: "Dana",
   last_name: "Czinsky",

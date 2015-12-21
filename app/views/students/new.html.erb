@@ -5,15 +5,15 @@
   <div class= "credentials">
     <br>
     <div class="new-name">
-      <%= text_field_tag :first_name, "", {:class => 'text-field half-field', :placeholder =>'Last Name'} %>
-      <%= text_field_tag :last_name, "", {:class => 'text-field half-field', :placeholder =>'Last Name'}  %>
+      <%= text_field_tag :first_name, nil, {:class => 'text-field half-field', :placeholder =>'Last Name'} %>
+      <%= text_field_tag :last_name, nil, {:class => 'text-field half-field', :placeholder =>'Last Name'}  %>
     </div> <!-- .new-name -->
     <br> 
-    <%= text_field_tag :email, "", {:class => 'text-field', :placeholder =>'Email'}%>
+    <%= text_field_tag :email, nil, {:class => 'text-field', :placeholder =>'Email'}%>
     <br>
-    <%= password_field_tag :password, "", {:class => 'text-field', :placeholder =>'Password'} %>
+    <%= password_field_tag :password, nil, {:class => 'text-field', :placeholder =>'Password'} %>
     <br>
-    <%= password_field_tag :password_confirmation, "", {:class => 'text-field', :placeholder =>'Password Confirmation'}%>
+    <%= password_field_tag :password_confirmation, nil, {:class => 'text-field', :placeholder =>'Password Confirmation'}%>
     <br>
     <%= submit_tag "Register", {:class => "button login-btn"}%>
     <% end %>
