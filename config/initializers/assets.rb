@@ -12,3 +12,6 @@ Rails.application.config.assets.version = '1.0'
 
 # Rails.application.config.assets.precompile += %w( main_stylesheet.css )
 
+Rails.application.config.assets.precompile += %w( login_registration_pages.css )
+
+Rails.application.config.assets.precompile += %w( exit_ticket_creation.css )
