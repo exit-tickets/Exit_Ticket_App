@@ -32,12 +32,8 @@ module ExitTicketApp
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-<<<<<<< HEAD
-    config.active_record.raise_in_transactional_callbacks = tru
-=======
+
     config.active_record.raise_in_transactional_callbacks = true   
->>>>>>> c6303e7716ef1972221bce556fa62a4e9a9e275e
   end
 
-  config.assets.initialize_on_precompile = false
-end
+  
