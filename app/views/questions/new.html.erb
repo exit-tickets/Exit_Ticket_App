@@ -1,27 +1,21 @@
-<h1>What are the Questions?</h1>
-
-
-<% if @questions.any? %>
+<h1 class="headline">Create an Exit Ticket</h1>
+<div class="form-wrap">
+  <% if @questions.any? %>
     <ol>
+      <% @questions.each do |question| %>
+        <li class="exit-ticket-list"><%= question.question.capitalize %></li>
+      <% end %>
+    </ol>  
+  <% else %>
+      <p class="exit-ticket-list">You haven't created any questions.</p>
+  <% end %>
 
-    <% @questions.each do |question| %>
-        <li><%= question.question.capitalize %></li>
-    <% end %>
-    
-    </ol>
-    
-<% else %>
-    <p>Why no questions?</p>
-<% end %>
-
-
-<%= form_tag("/exit_tickets/#{@exit_ticket.id}/questions") do |f| %>
-	<%= label_tag :question %>
-  <br>
-	<%= text_area_tag :question, nil, size: "50x5" %>
-	<br>
-  <%= submit_tag "Submit Question" %>
-<% end %>
+  <%= form_tag("/exit_tickets/#{@exit_ticket.id}/questions") do |f| %>
+  	<%= text_area_tag :question, nil, {:class => 'question-field', :placeholder =>'Question'}  %>
+  	<br>
+    <%= submit_tag "Submit Question",{:class => "button"} %>
+  <% end %>
+</div> <!-- .form-wrap -->
  
 <a href="/instructors/<%=@instructor.id%>/cohorts/<%=@cohort.id%>" > Done1 </a>
 <br>
