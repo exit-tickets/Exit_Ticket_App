@@ -6,7 +6,7 @@ body {
   color: white;
 }
 
-.cohort-show-page {
+.cohort-show-page, .instructor-show-page {
   text-align: center;
 }
 
@@ -45,6 +45,11 @@ a {
   margin: 0 auto;
 } 
 
+.wrapper2 {
+  max-width: 55%;
+  margin: 0 auto;
+} 
+
 .create-button {
   background-color: #fa4542;
   box-shadow: 0 5px 0 0 #be0201;
@@ -79,7 +84,7 @@ a {
   border-bottom: 5px solid black;
 }
 
-.cohort-instructors, .cohort-producers, .cohort-students {
+.cohort-instructors, .cohort-producers, .cohort-students, .instructor-cohorts {
   margin: 5px;
   margin-bottom: 20px;
   background: white;
@@ -87,6 +92,10 @@ a {
   padding-bottom: 5px;
   overflow: auto;
   color: black;
+}
+
+.instructor-name h1 {
+  text-align: center;
 }
 
 .WDI {
@@ -99,15 +108,12 @@ a {
   margin-top: 5px;
 }
 
+.instructor-cohorts {
+  text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.create-cohort {
+  margin: 0 auto;
+  width: 30%;
+  margin-bottom: 20px;
+}
