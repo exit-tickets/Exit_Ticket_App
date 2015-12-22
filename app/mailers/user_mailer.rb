@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
 
 	def exit_ticket_email(student, exit_ticket)
 		@student = student
-		@url = "https://safe-fortress-4071.herokuapp.com/exit_tickets/#{exit_ticket.id}/responses/new"
+		@url = "https://obscure-refuge-4735.herokuapp.com/exit_tickets/#{exit_ticket.id}/responses/new"
 		mail(to: @student.email, subject: "Hurry up Dummy!")
 	end
 end

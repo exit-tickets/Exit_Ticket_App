@@ -85,11 +85,7 @@ GEM
     minitest (5.8.3)
     multi_json (1.11.2)
     multi_xml (0.5.5)
-<<<<<<< HEAD
-    nokogiri (1.6.7)
-=======
     nokogiri (1.6.7.1)
->>>>>>> 78bd06ffe37ebed769d7bb79feb8657c949a169b
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
     pry (0.10.3)
