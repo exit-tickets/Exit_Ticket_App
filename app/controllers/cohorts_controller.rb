@@ -20,9 +20,9 @@ class CohortsController < ApplicationController
 
 	def show
 		@cohort = Cohort.find(params[:id])
-		@students = @cohort.students
-		@instructor = @cohort.instructor
-		@weather = HTTParty.get("http://api.wunderground.com/api/#{ENV["WUNDERGROUND_KEY"]}/conditions/q/NY/New_York_City.json")
+		@students = @cohort.students if @cohort.students
+		@instructor = @cohort.instructor 
+		# @weather = HTTParty.get("http://api.wunderground.com/api/#{ENV["WUNDERGROUND_KEY"]}/conditions/q/NY/New_York_City.json")
 	end
 
 	def destroy
