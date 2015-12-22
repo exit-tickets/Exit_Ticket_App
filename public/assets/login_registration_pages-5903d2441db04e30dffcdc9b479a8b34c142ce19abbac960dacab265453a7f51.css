@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+/* ///// Login Box ///// */
+
+.login {
+  position: relative;
+  height: 330px;
+  width: 50%;
+  background: rgba(100, 100, 100, .3);
+  margin: 0 auto 200px auto;
+}
+
+.login-radio {
+  width: 100%;
+  height: 70px;
+  margin: 20px 0;
+}
+
+.radio {
+  display: inline-block;
+  margin: 30px 4%;
+  white-space: nowrap;
+}
+
+label {
+  display: inline-block;
+  margin: 0 10px;
+  font: bold 30px 'Oswald', Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+}
+
+.credentials {
+  width: 75%;
+  height: 50%;
+  margin: 10px auto;  
+}
+
+.text-field {
+  display: block;
+  width: 76%;
+  height: 42px;
+  margin: 5px auto;
+  font: 20px 'Oswald';
+  background: rgb(200, 200, 200);
+  border: none;
+}
+
+.new-name {
+  width: 76%;
+  margin: 0 auto ;
+}
+
+.new-name input:last-child {
+  margin-left: 4.15%;
+
+}
+
+.half-field {
+  display: inline-block;
+  margin: 0 auto;
+  width: 47%;
+}
+
+.new-links {
+  display: inline-block;
+  width: 75%;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.n-link {
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  margin: 0 10px;
+}
+
+.seperator {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.back-to-signup {
+  position: absolute;
+  left: 5px;
+  bottom: 8px;
+  font-size: 18px;
+}
+
+.login-btn {
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+
+}
+
