@@ -683,7 +683,7 @@ input[type="radio"] {
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 
 body {
-  background: url("<img src="/assets/chalkboard-fcee987a3a6924f5b90084072aa5443ab435e91f933b1cb5464f3cdf414d811c.jpg" alt="Chalkboard fcee987a3a6924f5b90084072aa5443ab435e91f933b1cb5464f3cdf414d811c" />") no-repeat;
+  background: url("/assets/chalkboard-fcee987a3a6924f5b90084072aa5443ab435e91f933b1cb5464f3cdf414d811c.jpg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
